@@ -1,0 +1,14 @@
+F:\exp_database\数据库实验\bin\Debug\数据库实验.exe.config
+F:\exp_database\数据库实验\bin\Debug\数据库实验.exe
+F:\exp_database\数据库实验\bin\Debug\数据库实验.pdb
+F:\exp_database\数据库实验\bin\Debug\SunnyUI.Common.dll
+F:\exp_database\数据库实验\bin\Debug\SunnyUI.dll
+F:\exp_database\数据库实验\obj\Debug\数据库实验.csproj.AssemblyReference.cache
+F:\exp_database\数据库实验\obj\Debug\数据库实验.Form1.resources
+F:\exp_database\数据库实验\obj\Debug\数据库实验.Properties.Resources.resources
+F:\exp_database\数据库实验\obj\Debug\数据库实验.csproj.GenerateResource.cache
+F:\exp_database\数据库实验\obj\Debug\数据库实验.csproj.CoreCompileInputs.cache
+F:\exp_database\数据库实验\obj\Debug\数据库实验.exe
+F:\exp_database\数据库实验\obj\Debug\数据库实验.pdb
+F:\exp_database\数据库实验\obj\Debug\数据库实验.loginform.resources
+F:\exp_database\数据库实验\obj\Debug\数据库实验.csproj.CopyComplete
