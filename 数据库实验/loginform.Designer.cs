@@ -30,6 +30,7 @@ namespace 数据库实验
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginform));
+            this.uiCheckBox1 = new Sunny.UI.UICheckBox();
             this.SuspendLayout();
             // 
             // uiPanel1
@@ -40,12 +41,26 @@ namespace 数据库实验
             // 
             this.lblSubText.Location = new System.Drawing.Point(376, 456);
             // 
+            // uiCheckBox1
+            // 
+            this.uiCheckBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiCheckBox1.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.uiCheckBox1.Location = new System.Drawing.Point(433, 379);
+            this.uiCheckBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiCheckBox1.Name = "uiCheckBox1";
+            this.uiCheckBox1.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.uiCheckBox1.Size = new System.Drawing.Size(90, 25);
+            this.uiCheckBox1.TabIndex = 9;
+            this.uiCheckBox1.Text = "管理员";
+            this.uiCheckBox1.CheckedChanged += new System.EventHandler(this.uiCheckBox1_CheckedChanged);
+            // 
             // loginform
             // 
             this.AllowShowTitle = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(750, 450);
+            this.Controls.Add(this.uiCheckBox1);
             this.LoginImage = Sunny.UI.UILoginForm.UILoginImage.Login4;
             this.MaximizeBox = false;
             this.Name = "loginform";
@@ -56,10 +71,18 @@ namespace 数据库实验
             this.ShowTitle = true;
             this.Text = "loginform";
             this.ButtonLoginClick += new System.EventHandler(this.loginform_ButtonLoginClick);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.loginform_FormClosed);
+            this.Load += new System.EventHandler(this.loginform_Load);
+            this.Controls.SetChildIndex(this.uiCheckBox1, 0);
+            this.Controls.SetChildIndex(this.lblTitle, 0);
+            this.Controls.SetChildIndex(this.lblSubText, 0);
+            this.Controls.SetChildIndex(this.uiPanel1, 0);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private UICheckBox uiCheckBox1;
     }
 }

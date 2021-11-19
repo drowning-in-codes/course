@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>数据库实验</RootNamespace>
     <AssemblyName>数据库实验</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="SunnyUI, Version=3.0.8.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb, processorArchitecture=MSIL">
       <HintPath>packages\SunnyUI.3.0.8\lib\net40\SunnyUI.dll</HintPath>
     </Reference>
@@ -39,6 +44,7 @@
       <HintPath>packages\SunnyUI.Common.3.0.8\lib\net40\SunnyUI.Common.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Web.Extensions" />
@@ -53,6 +59,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="alterbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alterbook.Designer.cs">
+      <DependentUpon>alterbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bookinfo.Designer.cs">
+      <DependentUpon>bookinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="book_systemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>book_systemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="book_systemDataSet_book.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>book_systemDataSet_book.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +95,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="studentinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentinfo.Designer.cs">
+      <DependentUpon>studentinfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="alterbook.resx">
+      <DependentUpon>alterbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookinfo.resx">
+      <DependentUpon>bookinfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,7 +127,37 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentinfo.resx">
+      <DependentUpon>studentinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="book_systemDataSet.xsc">
+      <DependentUpon>book_systemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="book_systemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>book_systemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="book_systemDataSet.xss">
+      <DependentUpon>book_systemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="book_systemDataSet_book.xsc">
+      <DependentUpon>book_systemDataSet_book.xsd</DependentUpon>
+    </None>
+    <None Include="book_systemDataSet_book.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>book_systemDataSet_book.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="book_systemDataSet_book.xss">
+      <DependentUpon>book_systemDataSet_book.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -95,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1557137354325_8bd60c2c-68e9-703d-9cec-e81d225ea5e6.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

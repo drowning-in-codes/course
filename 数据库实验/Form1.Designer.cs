@@ -29,11 +29,22 @@ namespace 数据库实验
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.greetings = new System.Windows.Forms.ToolStripStatusLabel();
             this.level = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Label3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学生信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.书籍信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.更改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.uiButton1 = new Sunny.UI.UIButton();
             this.statusStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -41,21 +52,13 @@ namespace 数据库实验
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.greetings,
-            this.level});
+            this.level,
+            this.Label3});
             this.statusStrip1.Location = new System.Drawing.Point(2, 422);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(796, 26);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(2, 35);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(796, 30);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // greetings
             // 
@@ -70,10 +73,94 @@ namespace 数据库实验
             this.level.Size = new System.Drawing.Size(57, 20);
             this.level.Text = "Label2";
             // 
+            // Label3
+            // 
+            this.Label3.Margin = new System.Windows.Forms.Padding(70, 4, 0, 2);
+            this.Label3.Name = "Label3";
+            this.Label3.Size = new System.Drawing.Size(81, 20);
+            this.Label3.Text = "生成时间...";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.查询ToolStripMenuItem,
+            this.关于ToolStripMenuItem,
+            this.设置ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(2, 35);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(796, 28);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 查询ToolStripMenuItem
+            // 
+            this.查询ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.学生信息ToolStripMenuItem,
+            this.书籍信息ToolStripMenuItem,
+            this.更改密码ToolStripMenuItem});
+            this.查询ToolStripMenuItem.Name = "查询ToolStripMenuItem";
+            this.查询ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.查询ToolStripMenuItem.Text = "查询";
+            // 
+            // 学生信息ToolStripMenuItem
+            // 
+            this.学生信息ToolStripMenuItem.Name = "学生信息ToolStripMenuItem";
+            this.学生信息ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.学生信息ToolStripMenuItem.Text = "学生信息";
+            this.学生信息ToolStripMenuItem.Click += new System.EventHandler(this.学生信息ToolStripMenuItem_Click);
+            // 
+            // 书籍信息ToolStripMenuItem
+            // 
+            this.书籍信息ToolStripMenuItem.Name = "书籍信息ToolStripMenuItem";
+            this.书籍信息ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.书籍信息ToolStripMenuItem.Text = "书籍信息";
+            this.书籍信息ToolStripMenuItem.Click += new System.EventHandler(this.书籍信息ToolStripMenuItem_Click);
+            // 
+            // 更改密码ToolStripMenuItem
+            // 
+            this.更改密码ToolStripMenuItem.Name = "更改密码ToolStripMenuItem";
+            this.更改密码ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.更改密码ToolStripMenuItem.Text = "更改密码";
+            // 
+            // 关于ToolStripMenuItem
+            // 
+            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.关于ToolStripMenuItem.Text = "关于";
+            // 
+            // 设置ToolStripMenuItem
+            // 
+            this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.设置ToolStripMenuItem.Text = "设置";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // uiButton1
+            // 
+            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton1.Location = new System.Drawing.Point(161, 305);
+            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton1.Name = "uiButton1";
+            this.uiButton1.Size = new System.Drawing.Size(100, 35);
+            this.uiButton1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiButton1.TabIndex = 3;
+            this.uiButton1.Text = "uiButton1";
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::数据库实验.Resource1._1557137354325_8bd60c2c_68e9_703d_9cec_e81d225ea5e6;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.uiButton1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.ExtendBox = true;
@@ -84,10 +171,14 @@ namespace 数据库实验
             this.ShowIcon = true;
             this.ShowRadius = false;
             this.ShowTitleIcon = true;
+            this.Style = Sunny.UI.UIStyle.Custom;
             this.Text = "数据库实验";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,6 +190,15 @@ namespace 数据库实验
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripStatusLabel greetings;
         private System.Windows.Forms.ToolStripStatusLabel level;
+        private System.Windows.Forms.ToolStripStatusLabel Label3;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem 查询ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
+        private UIButton uiButton1;
+        private System.Windows.Forms.ToolStripMenuItem 学生信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 书籍信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 更改密码ToolStripMenuItem;
     }
 }
 

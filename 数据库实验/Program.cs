@@ -22,11 +22,11 @@ namespace 数据库实验
             {
                 
                 
-                Application.Run(new Form1(lf.name));
+                Application.Run(new Form1(lf.name,lf.state,lf.con));
             }
             else if (lf.userinfo == 2)
             {
-                Application.Run(new Form1(lf.name));
+                Application.Run(new Form1(lf.name,lf.state,lf.con));
             }
 
 

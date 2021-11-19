@@ -1,5 +1,7 @@
-﻿using Sunny.UI;
+﻿using System.Configuration;
+using Sunny.UI;
 using System;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,50 +15,95 @@ namespace 数据库实验
 {
     public partial class loginform : UILoginForm
     {
+        string sql = "select sno,s_password from student";
+        MySqlCommand cmd;
+        MySqlDataReader dr;
         public string name;
         public int userinfo;
+        public MySqlConnection con;
+        public int state;
+        int flag = 1;
         public loginform()
         {
             InitializeComponent();
         }
 
-       
+
 
         private void loginform_ButtonLoginClick(object sender, EventArgs e)
         {
-
-            //如果是管理员登录
-            if (this.UserName == "admin")
+            flag = 1;
+            cmd = new MySqlCommand(sql, con);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
             {
-                if (this.Password == "admin")
-                {
-                    UIMessageTip.ShowOk("登陆成功");
-                    this.name = this.UserName;
-                    this.userinfo = 1; //表示是管理员
-                    this.Close();
-                }
-                else
-                {
-                    UIMessageTip.ShowError("输入账户或密码错误");
 
+                string user = dr[0].ToString();
+                string password = dr[1].ToString();
+                //如果是管理员登录
+                if (this.UserName == user)
+                {
+                    if (this.Password == password)
+                    {
+                        flag = 0;
+                        
+                        UIMessageTip.ShowOk("登陆成功");
+                        this.name = this.UserName;
+                        this.userinfo = 1; //表示是管理员
+                        dr.Close();
+                        this.Close();
+                        break;
+                    }
                 }
+            }
+            if(flag==1)
+                UIMessageTip.ShowError("输入账户或密码错误");
+            dr.Close();
+            
+        }
+
+        private void loginform_Load(object sender, EventArgs e)
+        {
+            if (this.uiCheckBox1.Checked)
+            {
+                this.sql = "select a_name,a_password from administer";
+            }
+            
+            string constr = ConfigurationManager.ConnectionStrings["book_systemConnectionString1"].ConnectionString+";pwd=shu12322s";
+     
+            try
+            {
+                con = new MySqlConnection(constr);
+                con.Open();
+            }
+            catch (Exception ex)
+            {
+                UIMessageBox.ShowError("连接数据库失败" + ex.Message);
+            }
+            
+
+        }
+
+        private void uiCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(this.uiCheckBox1.Checked)
+            {
+                state = 1;//管理员
+                sql = "select a_name,a_password from administer";
             }
             else
             {
-                if (this.UserName == "" && this.Password == "")
-                {
-                    UIMessageTip.ShowOk("登陆成功");
-                    this.name = this.UserName;
-                    this.userinfo = 1; //表示使学生
-                    this.Close();
-                }
-                else
-                {
-                    UIMessageTip.ShowError("输入账户或密码错误");
-
-                }
+                state = 0;//学生
+                sql = "select sno,s_password from student";
             }
-            //如果是学生登陆
+        }
+
+        private void loginform_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(this.flag==1)
+            {
+                con.Close();
+            }
         }
     }
 }
