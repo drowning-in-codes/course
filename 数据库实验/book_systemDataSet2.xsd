@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="book_systemDataSet_book" targetNamespace="http://tempuri.org/book_systemDataSet_book.xsd" xmlns:mstns="http://tempuri.org/book_systemDataSet_book.xsd" xmlns="http://tempuri.org/book_systemDataSet_book.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="book_systemDataSet2" targetNamespace="http://tempuri.org/book_systemDataSet2.xsd" xmlns:mstns="http://tempuri.org/book_systemDataSet2.xsd" xmlns="http://tempuri.org/book_systemDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="
-                      " ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="book_systemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.数据库实验.Properties.Settings.GlobalReference.Default.book_systemConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="book_systemConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="book_systemConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.数据库实验.Properties.Settings.GlobalReference.Default.book_systemConnectionString2" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="booksTableAdapter" GeneratorDataComponentClassName="booksTableAdapter" Name="books" UserDataComponentName="booksTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="book_systemConnectionString (Settings)" DbObjectName="book_system.books" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="book_systemConnectionString1 (Settings)" DbObjectName="book_system.books" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `books` WHERE ((`isbn` = @p1) AND ((@p2 = 1 AND `b_name` IS NULL) OR (`b_name` = @p3)) AND ((@p4 = 1 AND `b_publish_time` IS NULL) OR (`b_publish_time` = @p5)) AND ((@p6 = 1 AND `b_author` IS NULL) OR (`b_author` = @p7)) AND ((@p8 = 1 AND `b_num` IS NULL) OR (`b_num` = @p9)) AND ((@p10 = 1 AND `b_pop` IS NULL) OR (`b_pop` = @p11)))</CommandText>
@@ -89,7 +88,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="book_systemDataSet_book" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="book_systemDataSet_book" msprop:Generator_UserDSName="book_systemDataSet_book">
+  <xs:element name="book_systemDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="book_systemDataSet2" msprop:Generator_UserDSName="book_systemDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="books" msprop:Generator_TableClassName="booksDataTable" msprop:Generator_TableVarName="tablebooks" msprop:Generator_TablePropName="books" msprop:Generator_RowDeletingName="booksRowDeleting" msprop:Generator_RowChangingName="booksRowChanging" msprop:Generator_RowEvHandlerName="booksRowChangeEventHandler" msprop:Generator_RowDeletedName="booksRowDeleted" msprop:Generator_UserTableName="books" msprop:Generator_RowChangedName="booksRowChanged" msprop:Generator_RowEvArgName="booksRowChangeEvent" msprop:Generator_RowClassName="booksRow">

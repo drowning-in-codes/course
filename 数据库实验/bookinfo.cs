@@ -57,8 +57,8 @@ namespace 数据库实验
             else
             {   
                
-                    string sql = "update books set b_name=\"{0}\",b_publish_time=\"{1}\",b_author=\"{2}\",b_num=\"{3}\",b_pop=\"{4}\" where isbn={4};";
-                    MySqlCommand cmd = new MySqlCommand(string.Format(sql, info[0], info[1], info[2], info[3], sno), con);
+                    string sql = "update books set b_name=\"{0}\",b_publish_time=\"{1}\",b_author=\"{2}\",b_num=\"{3}\",b_pop=\"{4}\" where isbn={5};";
+                    MySqlCommand cmd = new MySqlCommand(string.Format(sql, info[0], info[1], info[2], info[3],info[4],sno), con);
                     int i = 0;
                     try
                     {
@@ -70,7 +70,7 @@ namespace 数据库实验
                         UIMessageTip.ShowError("更新错误"+ex.Message);
                     }
                     if(suc)
-                        UIMessageTip.ShowOk("更新成功");
+                        UIMessageTip.ShowOk(string.Format("更新成功{0}条记录", i));
 
                 
             }
@@ -87,9 +87,7 @@ namespace 数据库实验
             }
             else
             {
-     
                     string sql = "insert into books values(\"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\");";
-                    UIMessageTip.Show(sql);
                     MySqlCommand cmd = new MySqlCommand(string.Format(sql, sno,info[0], info[1], info[2], info[3],info[4]), con);
                     int i = 0;
                     try
@@ -102,7 +100,7 @@ namespace 数据库实验
                         UIMessageTip.ShowError("添加错误" + ex.Message);
                     }
                     if(suc)
-                        UIMessageTip.ShowOk("添加成功");
+                        UIMessageTip.ShowOk(string.Format("添加成功{0}条记录",i));
 
                
             }

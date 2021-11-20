@@ -18,11 +18,10 @@ namespace 数据库实验
         string sql = "select sno,s_password from student";
         MySqlCommand cmd;
         MySqlDataReader dr;
-        public string name;
-        public int userinfo;
+        public string name; 
         public MySqlConnection con;
         public int state;
-        int flag = 1;
+        public int flag = 1;
         public loginform()
         {
             InitializeComponent();
@@ -40,7 +39,7 @@ namespace 数据库实验
 
                 string user = dr[0].ToString();
                 string password = dr[1].ToString();
-                //如果是管理员登录
+                
                 if (this.UserName == user)
                 {
                     if (this.Password == password)
@@ -49,7 +48,7 @@ namespace 数据库实验
                         
                         UIMessageTip.ShowOk("登陆成功");
                         this.name = this.UserName;
-                        this.userinfo = 1; //表示是管理员
+                        
                         dr.Close();
                         this.Close();
                         break;
@@ -69,7 +68,7 @@ namespace 数据库实验
                 this.sql = "select a_name,a_password from administer";
             }
             
-            string constr = ConfigurationManager.ConnectionStrings["book_systemConnectionString1"].ConnectionString+";pwd=shu12322s";
+            string constr = ConfigurationManager.ConnectionStrings["数据库实验.Properties.Settings.book_systemConnectionString"].ToString();
      
             try
             {

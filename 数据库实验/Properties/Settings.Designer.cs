@@ -29,7 +29,7 @@ namespace 数据库实验.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=book_system;persistsecurityinfo=True")]
         public string book_systemConnectionString {
             get {
-                return ((string)(this["book_systemConnectionString"]+ ";pwd=shu12322s"));
+                return ((string)(this["book_systemConnectionString"]));
             }
         }
         
@@ -39,7 +39,18 @@ namespace 数据库实验.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=book_system")]
         public string book_systemConnectionString1 {
             get {
-                return ((string)(this["book_systemConnectionString1"] + ";pwd=shu12322s"));
+                return ((string)(this["book_systemConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=shu12322s;database=book_system;persistsecu" +
+            "rityinfo=True")]
+        public string book_systemConnectionString2 {
+            get {
+                return ((string)(this["book_systemConnectionString2"]));
             }
         }
     }
