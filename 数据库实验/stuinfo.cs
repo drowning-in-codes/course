@@ -79,5 +79,7 @@ namespace 数据库实验
         {
             this.Close();
         }
+
+       
     }
 }

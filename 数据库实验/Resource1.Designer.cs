@@ -69,5 +69,35 @@ namespace 数据库实验 {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _1ad5ad6eddc451da81cb7f2ecfad4566d016082494ec {
+            get {
+                object obj = ResourceManager.GetObject("1ad5ad6eddc451da81cb7f2ecfad4566d016082494ec", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap bella {
+            get {
+                object obj = ResourceManager.GetObject("bella", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap s_bella {
+            get {
+                object obj = ResourceManager.GetObject("s_bella", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

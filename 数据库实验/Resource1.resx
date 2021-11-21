@@ -118,7 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="1ad5ad6eddc451da81cb7f2ecfad4566d016082494ec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\1ad5ad6eddc451da81cb7f2ecfad4566d016082494ec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_1557137354325_8bd60c2c_68e9_703d_9cec_e81d225ea5e6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\1557137354325_8bd60c2c-68e9-703d-9cec-e81d225ea5e6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bella" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\bella.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="s_bella" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\s_bella.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

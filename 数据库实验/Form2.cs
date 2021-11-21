@@ -153,7 +153,7 @@ namespace 数据库实验
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
         {
-            UIMessageTip.Show("借阅" + this.comboBox1.Text);
+            UIMessageTip.Show("借阅书籍ISBN:" + this.comboBox1.Text);
         }
     }
 }

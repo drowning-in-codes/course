@@ -32,13 +32,13 @@ namespace 数据库实验
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiButton2 = new Sunny.UI.UIButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +46,7 @@ namespace 数据库实验
             // uiLabel1
             // 
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.Location = new System.Drawing.Point(141, 179);
+            this.uiLabel1.Location = new System.Drawing.Point(141, 220);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(100, 33);
             this.uiLabel1.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace 数据库实验
             // uiLabel2
             // 
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.Location = new System.Drawing.Point(12, 189);
+            this.uiLabel2.Location = new System.Drawing.Point(12, 225);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(100, 23);
             this.uiLabel2.TabIndex = 1;
@@ -70,20 +70,31 @@ namespace 数据库实验
             this.uiGroupBox1.Controls.Add(this.uiLabel2);
             this.uiGroupBox1.Controls.Add(this.uiLabel1);
             this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiGroupBox1.Location = new System.Drawing.Point(112, 77);
+            this.uiGroupBox1.Location = new System.Drawing.Point(78, 40);
             this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(350, 233);
+            this.uiGroupBox1.Size = new System.Drawing.Size(384, 270);
             this.uiGroupBox1.TabIndex = 2;
             this.uiGroupBox1.Text = "学生信息";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox1.Image = global::数据库实验.Resource1.s_bella;
+            this.pictureBox1.Location = new System.Drawing.Point(245, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 120);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // uiLabel5
             // 
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.Location = new System.Drawing.Point(141, 149);
+            this.uiLabel5.Location = new System.Drawing.Point(141, 177);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(100, 23);
             this.uiLabel5.TabIndex = 3;
@@ -93,7 +104,7 @@ namespace 数据库实验
             // uiLabel4
             // 
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel4.Location = new System.Drawing.Point(12, 149);
+            this.uiLabel4.Location = new System.Drawing.Point(12, 177);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(100, 23);
             this.uiLabel4.TabIndex = 2;
@@ -149,14 +160,6 @@ namespace 数据库实验
             this.uiButton2.TabIndex = 6;
             this.uiButton2.Text = "退出";
             this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(92, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 94);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // stuinfo
             // 

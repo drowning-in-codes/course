@@ -89,7 +89,7 @@ namespace 数据库实验
             this.设置ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(2, 35);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(796, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(796, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,20 +99,20 @@ namespace 数据库实验
             this.所借书籍ToolStripMenuItem,
             this.个人信息ToolStripMenuItem});
             this.查询ToolStripMenuItem.Name = "查询ToolStripMenuItem";
-            this.查询ToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
+            this.查询ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.查询ToolStripMenuItem.Text = "查询";
             // 
             // 所借书籍ToolStripMenuItem
             // 
             this.所借书籍ToolStripMenuItem.Name = "所借书籍ToolStripMenuItem";
-            this.所借书籍ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.所借书籍ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.所借书籍ToolStripMenuItem.Text = "所借书籍";
             this.所借书籍ToolStripMenuItem.Click += new System.EventHandler(this.所借书籍ToolStripMenuItem_Click);
             // 
             // 个人信息ToolStripMenuItem
             // 
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
             this.个人信息ToolStripMenuItem.Click += new System.EventHandler(this.个人信息ToolStripMenuItem_Click);
             // 
@@ -121,7 +121,7 @@ namespace 数据库实验
             this.关于ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.用户权限ToolStripMenuItem});
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // 用户权限ToolStripMenuItem
@@ -134,7 +134,7 @@ namespace 数据库实验
             // 设置ToolStripMenuItem
             // 
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.设置ToolStripMenuItem.Text = "设置";
             // 
             // statusStrip1
@@ -356,7 +356,7 @@ namespace 数据库实验
             this.uiDataGridView1.EnableHeadersVisualStyles = false;
             this.uiDataGridView1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.Location = new System.Drawing.Point(2, 65);
+            this.uiDataGridView1.Location = new System.Drawing.Point(2, 63);
             this.uiDataGridView1.Name = "uiDataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
