@@ -25,61 +25,34 @@ namespace 数据库实验
 
         private void havebook_Load(object sender, EventArgs e)
         {
-            int suc = 1;
-            string sql = "select sno,isbn,b_num,b_name from stu_sb where sno=\"{0}\";";
-            MySqlCommand cmd = new MySqlCommand(String.Format(sql,this.username),con);
-            MySqlDataReader dr = null ;
+
             try
-            {
-                dr = cmd.ExecuteReader();
+            {// TODO: 这行代码将数据加载到表“book_systemDataSet3.stu_sb”中。您可以根据需要移动或删除它。
+                this.stu_sbTableAdapter.Fill(this.book_systemDataSet3.stu_sb);
             }
             catch(Exception ex)
             {
-                UIMessageTip.ShowError("查询失败"+ex.Message);
-                suc = 0;
+                UIMessageBox.ShowError("查询失败"+ex.Message);
                 this.Close();
             }
-            if (suc == 1)
-            {
-                int i = 0;
-                UIMessageTip.ShowOk("查询成功");
-                while (dr.Read())
-                {
-                    this.uiDataGridView1.Rows[i].Cells[0].Value = dr[0];
-                    this.uiDataGridView1.Rows[i].Cells[1].Value = dr[1];
-                    this.uiDataGridView1.Rows[i].Cells[2].Value = dr[2];
-                    this.uiDataGridView1.Rows[i].Cells[3].Value = dr[3];
-                    i++;
-                }
-                dr.Close();
-            }
+            UIMessageTip.ShowOk("查询成功");
         }
 
         private void uiButton1_Click(object sender, EventArgs e)
         {
-            string sql = "select sno,isbn,b_num,b_name from stu_sb where sno=\"{0}\";";
-            MySqlCommand cmd = new MySqlCommand(String.Format(sql, this.username), con);
-            MySqlDataReader dr = null;
+            
             try
             {
-                dr = cmd.ExecuteReader();
+                this.stu_sbTableAdapter.Fill(this.book_systemDataSet3.stu_sb);
             }
             catch (Exception ex)
             {
-                UIMessageTip.ShowError("查询失败" + ex.Message);
+                UIMessageTip.ShowError("刷新失败" + ex.Message);
                 this.Close();
             }
-            int i = 0;
+           
             UIMessageTip.Show("刷新成功");
-            while (dr.Read())
-            {
-                this.uiDataGridView1.Rows[i].Cells[0].Value = dr[0];
-                this.uiDataGridView1.Rows[i].Cells[1].Value = dr[1];
-                this.uiDataGridView1.Rows[i].Cells[2].Value = dr[2];
-                this.uiDataGridView1.Rows[i].Cells[3].Value = dr[3];
-                i++;
-            }
-            dr.Close();
+           
         }
 
         private void uiButton2_Click(object sender, EventArgs e)

@@ -63,8 +63,8 @@ namespace 数据库实验
             int suc = 1;
             string book_sno = this.comboBox1.Text;
             string book_num = this.uiComboBox1.Text;
-            string sql = "insert into sb_info (sno,isbn,borrow_time,borrow_num) values(\"{0}\",\"{1}\",\"{2}\",\"{3}\");";
-            MySqlCommand cmd = new MySqlCommand(string.Format(sql, this.username, book_sno,DateTime.Now.DateTimeString()), con);
+            string sql = "insert into sb_info (sno,isbn,borrow_time,borrow_num) values (\"{0}\",\"{1}\",\"{2}\",{3});";
+            MySqlCommand cmd = new MySqlCommand(string.Format(sql, this.username, book_sno,DateTime.Now.DateTimeString(),book_num), con);
             try
             {
                 cmd.ExecuteNonQuery();
@@ -147,6 +147,13 @@ namespace 数据库实验
         {
             string info = "学生权限:1.借阅书籍\n2.归还书籍\n3.续借书籍\n4.修改密码" ;
             UIMessageDialog.ShowInfoDialog(this,info);
+        }
+
+       
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            UIMessageTip.Show("借阅" + this.comboBox1.Text);
         }
     }
 }

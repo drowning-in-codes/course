@@ -283,7 +283,9 @@ namespace 数据库实验 {
             
             private global::System.Data.DataColumn columnisbn;
             
-            private global::System.Data.DataColumn columnb_num;
+            private global::System.Data.DataColumn columnborrow_num;
+            
+            private global::System.Data.DataColumn columnborrow_time;
             
             private global::System.Data.DataColumn columnb_name;
             
@@ -338,9 +340,17 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn b_numColumn {
+            public global::System.Data.DataColumn borrow_numColumn {
                 get {
-                    return this.columnb_num;
+                    return this.columnborrow_num;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn borrow_timeColumn {
+                get {
+                    return this.columnborrow_time;
                 }
             }
             
@@ -389,12 +399,13 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public stu_sbRow Addstu_sbRow(string sno, string isbn, int b_num, string b_name) {
+            public stu_sbRow Addstu_sbRow(string sno, string isbn, int borrow_num, System.DateTime borrow_time, string b_name) {
                 stu_sbRow rowstu_sbRow = ((stu_sbRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         sno,
                         isbn,
-                        b_num,
+                        borrow_num,
+                        borrow_time,
                         b_name};
                 rowstu_sbRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstu_sbRow);
@@ -403,10 +414,11 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public stu_sbRow FindBysnoisbn(string sno, string isbn) {
+            public stu_sbRow FindBysnoisbnborrow_time(string sno, string isbn, System.DateTime borrow_time) {
                 return ((stu_sbRow)(this.Rows.Find(new object[] {
                             sno,
-                            isbn})));
+                            isbn,
+                            borrow_time})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -428,7 +440,8 @@ namespace 数据库实验 {
             internal void InitVars() {
                 this.columnsno = base.Columns["sno"];
                 this.columnisbn = base.Columns["isbn"];
-                this.columnb_num = base.Columns["b_num"];
+                this.columnborrow_num = base.Columns["borrow_num"];
+                this.columnborrow_time = base.Columns["borrow_time"];
                 this.columnb_name = base.Columns["b_name"];
             }
             
@@ -439,17 +452,21 @@ namespace 数据库实验 {
                 base.Columns.Add(this.columnsno);
                 this.columnisbn = new global::System.Data.DataColumn("isbn", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnisbn);
-                this.columnb_num = new global::System.Data.DataColumn("b_num", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnb_num);
+                this.columnborrow_num = new global::System.Data.DataColumn("borrow_num", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnborrow_num);
+                this.columnborrow_time = new global::System.Data.DataColumn("borrow_time", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnborrow_time);
                 this.columnb_name = new global::System.Data.DataColumn("b_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnb_name);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnsno,
-                                this.columnisbn}, true));
+                                this.columnisbn,
+                                this.columnborrow_time}, true));
                 this.columnsno.AllowDBNull = false;
                 this.columnsno.MaxLength = 10;
                 this.columnisbn.AllowDBNull = false;
                 this.columnisbn.MaxLength = 13;
+                this.columnborrow_time.AllowDBNull = false;
                 this.columnb_name.MaxLength = 15;
             }
             
@@ -615,17 +632,28 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int b_num {
+            public int borrow_num {
                 get {
                     try {
-                        return ((int)(this[this.tablestu_sb.b_numColumn]));
+                        return ((int)(this[this.tablestu_sb.borrow_numColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“stu_sb”中列“b_num”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“stu_sb”中列“borrow_num”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tablestu_sb.b_numColumn] = value;
+                    this[this.tablestu_sb.borrow_numColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime borrow_time {
+                get {
+                    return ((global::System.DateTime)(this[this.tablestu_sb.borrow_timeColumn]));
+                }
+                set {
+                    this[this.tablestu_sb.borrow_timeColumn] = value;
                 }
             }
             
@@ -647,14 +675,14 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isb_numNull() {
-                return this.IsNull(this.tablestu_sb.b_numColumn);
+            public bool Isborrow_numNull() {
+                return this.IsNull(this.tablestu_sb.borrow_numColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setb_numNull() {
-                this[this.tablestu_sb.b_numColumn] = global::System.Convert.DBNull;
+            public void Setborrow_numNull() {
+                this[this.tablestu_sb.borrow_numColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -831,7 +859,8 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
             tableMapping.DataSetTable = "stu_sb";
             tableMapping.ColumnMappings.Add("sno", "sno");
             tableMapping.ColumnMappings.Add("isbn", "isbn");
-            tableMapping.ColumnMappings.Add("b_num", "b_num");
+            tableMapping.ColumnMappings.Add("borrow_num", "borrow_num");
+            tableMapping.ColumnMappings.Add("borrow_time", "borrow_time");
             tableMapping.ColumnMappings.Add("b_name", "b_name");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -849,7 +878,8 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `sno`, `isbn`, `b_num`, `b_name` FROM `book_system`.`stu_sb`";
+            this._commandCollection[0].CommandText = "SELECT `sno`, `isbn`, `borrow_num`, `borrow_time`, `b_name` FROM `book_system`.`s" +
+                "tu_sb`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

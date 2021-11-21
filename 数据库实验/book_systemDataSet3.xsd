@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="book_systemConnectionString2 (Settings)" DbObjectName="book_system.stu_sb" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `sno`, `isbn`, `b_num`, `b_name` FROM `book_system`.`stu_sb`</CommandText>
+                    <CommandText>SELECT `sno`, `isbn`, `borrow_num`, `borrow_time`, `b_name` FROM `book_system`.`stu_sb`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -21,7 +21,8 @@
             <Mappings>
               <Mapping SourceColumn="sno" DataSetColumn="sno" />
               <Mapping SourceColumn="isbn" DataSetColumn="isbn" />
-              <Mapping SourceColumn="b_num" DataSetColumn="b_num" />
+              <Mapping SourceColumn="borrow_num" DataSetColumn="borrow_num" />
+              <Mapping SourceColumn="borrow_time" DataSetColumn="borrow_time" />
               <Mapping SourceColumn="b_name" DataSetColumn="b_name" />
             </Mappings>
             <Sources />
@@ -51,7 +52,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="b_num" msprop:Generator_ColumnVarNameInTable="columnb_num" msprop:Generator_ColumnPropNameInRow="b_num" msprop:Generator_ColumnPropNameInTable="b_numColumn" msprop:Generator_UserColumnName="b_num" type="xs:int" minOccurs="0" />
+              <xs:element name="borrow_num" msprop:Generator_ColumnVarNameInTable="columnborrow_num" msprop:Generator_ColumnPropNameInRow="borrow_num" msprop:Generator_ColumnPropNameInTable="borrow_numColumn" msprop:Generator_UserColumnName="borrow_num" type="xs:int" minOccurs="0" />
+              <xs:element name="borrow_time" msprop:Generator_ColumnVarNameInTable="columnborrow_time" msprop:Generator_ColumnPropNameInRow="borrow_time" msprop:Generator_ColumnPropNameInTable="borrow_timeColumn" msprop:Generator_UserColumnName="borrow_time" type="xs:dateTime" />
               <xs:element name="b_name" msprop:Generator_ColumnVarNameInTable="columnb_name" msprop:Generator_ColumnPropNameInRow="b_name" msprop:Generator_ColumnPropNameInTable="b_nameColumn" msprop:Generator_UserColumnName="b_name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -68,6 +70,7 @@
       <xs:selector xpath=".//mstns:stu_sb" />
       <xs:field xpath="mstns:sno" />
       <xs:field xpath="mstns:isbn" />
+      <xs:field xpath="mstns:borrow_time" />
     </xs:unique>
   </xs:element>
 </xs:schema>

@@ -78,6 +78,7 @@ namespace 数据库实验
             catch (Exception ex)
             {
                 UIMessageBox.ShowError("连接数据库失败" + ex.Message);
+                this.Close();
             }
             
 

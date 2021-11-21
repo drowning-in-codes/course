@@ -29,25 +29,58 @@ namespace 数据库实验
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiButton2 = new Sunny.UI.UIButton();
+            this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            this.book_systemDataSet3 = new 数据库实验.book_systemDataSet3();
+            this.stusbBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stu_sbTableAdapter = new 数据库实验.book_systemDataSet3TableAdapters.stu_sbTableAdapter();
+            this.snoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isbnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.borrownumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.borrowtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stusbBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // uiButton1
+            // 
+            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton1.Location = new System.Drawing.Point(187, 315);
+            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton1.Name = "uiButton1";
+            this.uiButton1.Size = new System.Drawing.Size(100, 35);
+            this.uiButton1.TabIndex = 1;
+            this.uiButton1.Text = "刷新数据";
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            // 
+            // uiButton2
+            // 
+            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton2.Location = new System.Drawing.Point(430, 315);
+            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton2.Name = "uiButton2";
+            this.uiButton2.Size = new System.Drawing.Size(100, 35);
+            this.uiButton2.TabIndex = 2;
+            this.uiButton2.Text = "退出";
+            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
             // 
             // uiDataGridView1
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.uiDataGridView1.AutoGenerateColumns = false;
+            this.uiDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.uiDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -61,10 +94,12 @@ namespace 数据库实验
             this.uiDataGridView1.ColumnHeadersHeight = 32;
             this.uiDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.uiDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.snoDataGridViewTextBoxColumn,
+            this.isbnDataGridViewTextBoxColumn,
+            this.borrownumDataGridViewTextBoxColumn,
+            this.borrowtimeDataGridViewTextBoxColumn,
+            this.bnameDataGridViewTextBoxColumn});
+            this.uiDataGridView1.DataSource = this.stusbBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -97,57 +132,59 @@ namespace 数据库实验
             this.uiDataGridView1.Size = new System.Drawing.Size(796, 197);
             this.uiDataGridView1.TabIndex = 0;
             // 
-            // Column1
+            // book_systemDataSet3
             // 
-            this.Column1.HeaderText = "sno";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.book_systemDataSet3.DataSetName = "book_systemDataSet3";
+            this.book_systemDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Column2
+            // stusbBindingSource
             // 
-            this.Column2.HeaderText = "isbn";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
+            this.stusbBindingSource.DataMember = "stu_sb";
+            this.stusbBindingSource.DataSource = this.book_systemDataSet3;
             // 
-            // Column3
+            // stu_sbTableAdapter
             // 
-            this.Column3.HeaderText = "num";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
+            this.stu_sbTableAdapter.ClearBeforeFill = true;
             // 
-            // Column4
+            // snoDataGridViewTextBoxColumn
             // 
-            this.Column4.HeaderText = "name";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
+            this.snoDataGridViewTextBoxColumn.DataPropertyName = "sno";
+            this.snoDataGridViewTextBoxColumn.HeaderText = "sno";
+            this.snoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.snoDataGridViewTextBoxColumn.Name = "snoDataGridViewTextBoxColumn";
+            this.snoDataGridViewTextBoxColumn.Width = 74;
             // 
-            // uiButton1
+            // isbnDataGridViewTextBoxColumn
             // 
-            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton1.Location = new System.Drawing.Point(187, 315);
-            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.Size = new System.Drawing.Size(100, 35);
-            this.uiButton1.TabIndex = 1;
-            this.uiButton1.Text = "刷新数据";
-            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            this.isbnDataGridViewTextBoxColumn.DataPropertyName = "isbn";
+            this.isbnDataGridViewTextBoxColumn.HeaderText = "isbn";
+            this.isbnDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.isbnDataGridViewTextBoxColumn.Name = "isbnDataGridViewTextBoxColumn";
+            this.isbnDataGridViewTextBoxColumn.Width = 79;
             // 
-            // uiButton2
+            // borrownumDataGridViewTextBoxColumn
             // 
-            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton2.Location = new System.Drawing.Point(430, 315);
-            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton2.Name = "uiButton2";
-            this.uiButton2.Size = new System.Drawing.Size(100, 35);
-            this.uiButton2.TabIndex = 2;
-            this.uiButton2.Text = "退出";
-            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
+            this.borrownumDataGridViewTextBoxColumn.DataPropertyName = "borrow_num";
+            this.borrownumDataGridViewTextBoxColumn.HeaderText = "borrow_num";
+            this.borrownumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.borrownumDataGridViewTextBoxColumn.Name = "borrownumDataGridViewTextBoxColumn";
+            this.borrownumDataGridViewTextBoxColumn.Width = 163;
+            // 
+            // borrowtimeDataGridViewTextBoxColumn
+            // 
+            this.borrowtimeDataGridViewTextBoxColumn.DataPropertyName = "borrow_time";
+            this.borrowtimeDataGridViewTextBoxColumn.HeaderText = "borrow_time";
+            this.borrowtimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.borrowtimeDataGridViewTextBoxColumn.Name = "borrowtimeDataGridViewTextBoxColumn";
+            this.borrowtimeDataGridViewTextBoxColumn.Width = 162;
+            // 
+            // bnameDataGridViewTextBoxColumn
+            // 
+            this.bnameDataGridViewTextBoxColumn.DataPropertyName = "b_name";
+            this.bnameDataGridViewTextBoxColumn.HeaderText = "b_name";
+            this.bnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bnameDataGridViewTextBoxColumn.Name = "bnameDataGridViewTextBoxColumn";
+            this.bnameDataGridViewTextBoxColumn.Width = 115;
             // 
             // havebook
             // 
@@ -164,18 +201,23 @@ namespace 数据库实验
             this.Text = "havebook";
             this.Load += new System.EventHandler(this.havebook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stusbBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Sunny.UI.UIDataGridView uiDataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private Sunny.UI.UIButton uiButton1;
         private Sunny.UI.UIButton uiButton2;
+        private Sunny.UI.UIDataGridView uiDataGridView1;
+        private book_systemDataSet3 book_systemDataSet3;
+        private System.Windows.Forms.BindingSource stusbBindingSource;
+        private book_systemDataSet3TableAdapters.stu_sbTableAdapter stu_sbTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn snoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isbnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn borrownumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn borrowtimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bnameDataGridViewTextBoxColumn;
     }
 }
