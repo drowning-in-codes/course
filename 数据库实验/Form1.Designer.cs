@@ -131,6 +131,7 @@ namespace 数据库实验
             this.更改密码ToolStripMenuItem.Name = "更改密码ToolStripMenuItem";
             this.更改密码ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.更改密码ToolStripMenuItem.Text = "更改密码";
+            this.更改密码ToolStripMenuItem.Click += new System.EventHandler(this.更改密码ToolStripMenuItem_Click);
             // 
             // 关于ToolStripMenuItem
             // 
@@ -143,8 +144,9 @@ namespace 数据库实验
             // 管理员权限ToolStripMenuItem
             // 
             this.管理员权限ToolStripMenuItem.Name = "管理员权限ToolStripMenuItem";
-            this.管理员权限ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.管理员权限ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.管理员权限ToolStripMenuItem.Text = "管理员权限";
+            this.管理员权限ToolStripMenuItem.Click += new System.EventHandler(this.管理员权限ToolStripMenuItem_Click);
             // 
             // 设置ToolStripMenuItem
             // 

@@ -96,5 +96,17 @@ namespace 数据库实验
             borrow b = new borrow(con);
             b.Show();
         }
+
+        private void 更改密码ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            teinfo ti = new teinfo(con, this.username);
+            ti.Show();
+        }
+
+        private void 管理员权限ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string info = "管理员权限:1.增加书籍\n2.删除书籍\n3.增加,修改,删除学生信息\n4.审核借阅记录";
+            UIMessageDialog.ShowInfoDialog(this, info);
+        }
     }
 }

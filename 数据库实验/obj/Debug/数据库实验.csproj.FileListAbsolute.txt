@@ -32,3 +32,4 @@ F:\exp_database\数据库实验\obj\Debug\数据库实验.alterinfo.resources
 F:\exp_database\数据库实验\obj\Debug\数据库实验.Form2.resources
 F:\exp_database\数据库实验\obj\Debug\数据库实验.havebook.resources
 F:\exp_database\数据库实验\obj\Debug\数据库实验.stuinfo.resources
+F:\exp_database\数据库实验\obj\Debug\数据库实验.teinfo.resources

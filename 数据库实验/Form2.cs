@@ -142,5 +142,11 @@ namespace 数据库实验
             stuinfo si = new stuinfo(con,this.username);
             si.Show();
         }
+
+        private void 用户权限ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string info = "学生权限:1.借阅书籍\n2.归还书籍\n3.续借书籍\n4.修改密码" ;
+            UIMessageDialog.ShowInfoDialog(this,info);
+        }
     }
 }

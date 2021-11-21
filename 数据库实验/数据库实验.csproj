@@ -153,6 +153,12 @@
     <Compile Include="stuinfo.Designer.cs">
       <DependentUpon>stuinfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="teinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teinfo.Designer.cs">
+      <DependentUpon>teinfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="alterbook.resx">
       <DependentUpon>alterbook.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="stuinfo.resx">
       <DependentUpon>stuinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teinfo.resx">
+      <DependentUpon>teinfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="book_systemDataSet.xsc">
       <DependentUpon>book_systemDataSet.xsd</DependentUpon>
