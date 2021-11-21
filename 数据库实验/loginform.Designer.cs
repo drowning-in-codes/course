@@ -33,13 +33,17 @@ namespace 数据库实验
             this.uiCheckBox1 = new Sunny.UI.UICheckBox();
             this.SuspendLayout();
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Text = "图书馆借阅系统";
+            // 
             // uiPanel1
             // 
             this.uiPanel1.Text = "";
             // 
             // lblSubText
             // 
-            this.lblSubText.Location = new System.Drawing.Point(376, 456);
+            this.lblSubText.Location = new System.Drawing.Point(374, 456);
             // 
             // uiCheckBox1
             // 
@@ -64,12 +68,13 @@ namespace 数据库实验
             this.LoginImage = Sunny.UI.UILoginForm.UILoginImage.Login4;
             this.MaximizeBox = false;
             this.Name = "loginform";
-            this.Padding = new System.Windows.Forms.Padding(0, 35, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(2, 35, 2, 2);
+            this.ShowDragStretch = true;
             this.ShowInTaskbar = true;
             this.ShowRadius = false;
-            this.ShowRect = false;
             this.ShowTitle = true;
             this.Text = "loginform";
+            this.Title = "图书馆借阅系统";
             this.ButtonLoginClick += new System.EventHandler(this.loginform_ButtonLoginClick);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.loginform_FormClosed);
             this.Load += new System.EventHandler(this.loginform_Load);
