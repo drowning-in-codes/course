@@ -20,17 +20,17 @@ namespace 数据库实验 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("book_systemDataSet3")]
+    [global::System.Xml.Serialization.XmlRootAttribute("book_systemDataSet4")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class book_systemDataSet3 : global::System.Data.DataSet {
+    public partial class book_systemDataSet4 : global::System.Data.DataSet {
         
-        private stu_sbDataTable tablestu_sb;
+        private avai_bookDataTable tableavai_book;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public book_systemDataSet3() {
+        public book_systemDataSet4() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace 数据库实验 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected book_systemDataSet3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected book_systemDataSet4(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace 数据库实验 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["stu_sb"] != null)) {
-                    base.Tables.Add(new stu_sbDataTable(ds.Tables["stu_sb"]));
+                if ((ds.Tables["avai_book"] != null)) {
+                    base.Tables.Add(new avai_bookDataTable(ds.Tables["avai_book"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace 数据库实验 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public stu_sbDataTable stu_sb {
+        public avai_bookDataTable avai_book {
             get {
-                return this.tablestu_sb;
+                return this.tableavai_book;
             }
         }
         
@@ -127,7 +127,7 @@ namespace 数据库实验 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            book_systemDataSet3 cln = ((book_systemDataSet3)(base.Clone()));
+            book_systemDataSet4 cln = ((book_systemDataSet4)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace 数据库实验 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["stu_sb"] != null)) {
-                    base.Tables.Add(new stu_sbDataTable(ds.Tables["stu_sb"]));
+                if ((ds.Tables["avai_book"] != null)) {
+                    base.Tables.Add(new avai_bookDataTable(ds.Tables["avai_book"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace 数据库实验 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablestu_sb = ((stu_sbDataTable)(base.Tables["stu_sb"]));
+            this.tableavai_book = ((avai_bookDataTable)(base.Tables["avai_book"]));
             if ((initTable == true)) {
-                if ((this.tablestu_sb != null)) {
-                    this.tablestu_sb.InitVars();
+                if ((this.tableavai_book != null)) {
+                    this.tableavai_book.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace 数据库实验 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "book_systemDataSet3";
+            this.DataSetName = "book_systemDataSet4";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/book_systemDataSet3.xsd";
+            this.Namespace = "http://tempuri.org/book_systemDataSet4.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablestu_sb = new stu_sbDataTable();
-            base.Tables.Add(this.tablestu_sb);
+            this.tableavai_book = new avai_bookDataTable();
+            base.Tables.Add(this.tableavai_book);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializestu_sb() {
+        private bool ShouldSerializeavai_book() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace 数据库实验 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            book_systemDataSet3 ds = new book_systemDataSet3();
+            book_systemDataSet4 ds = new book_systemDataSet4();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,29 +270,31 @@ namespace 数据库实验 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void stu_sbRowChangeEventHandler(object sender, stu_sbRowChangeEvent e);
+        public delegate void avai_bookRowChangeEventHandler(object sender, avai_bookRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class stu_sbDataTable : global::System.Data.TypedTableBase<stu_sbRow> {
-            
-            private global::System.Data.DataColumn columnsno;
+        public partial class avai_bookDataTable : global::System.Data.TypedTableBase<avai_bookRow> {
             
             private global::System.Data.DataColumn columnisbn;
             
-            private global::System.Data.DataColumn columnborrow_num;
-            
-            private global::System.Data.DataColumn columnborrow_time;
-            
             private global::System.Data.DataColumn columnb_name;
+            
+            private global::System.Data.DataColumn columnb_publish_time;
+            
+            private global::System.Data.DataColumn columnb_author;
+            
+            private global::System.Data.DataColumn columnb_num;
+            
+            private global::System.Data.DataColumn columnb_pop;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public stu_sbDataTable() {
-                this.TableName = "stu_sb";
+            public avai_bookDataTable() {
+                this.TableName = "avai_book";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +302,7 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal stu_sbDataTable(global::System.Data.DataTable table) {
+            internal avai_bookDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,17 +319,9 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected stu_sbDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected avai_bookDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn snoColumn {
-                get {
-                    return this.columnsno;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -340,25 +334,41 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn borrow_numColumn {
-                get {
-                    return this.columnborrow_num;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn borrow_timeColumn {
-                get {
-                    return this.columnborrow_time;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn b_nameColumn {
                 get {
                     return this.columnb_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn b_publish_timeColumn {
+                get {
+                    return this.columnb_publish_time;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn b_authorColumn {
+                get {
+                    return this.columnb_author;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn b_numColumn {
+                get {
+                    return this.columnb_num;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn b_popColumn {
+                get {
+                    return this.columnb_pop;
                 }
             }
             
@@ -373,58 +383,57 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public stu_sbRow this[int index] {
+            public avai_bookRow this[int index] {
                 get {
-                    return ((stu_sbRow)(this.Rows[index]));
+                    return ((avai_bookRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event stu_sbRowChangeEventHandler stu_sbRowChanging;
+            public event avai_bookRowChangeEventHandler avai_bookRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event stu_sbRowChangeEventHandler stu_sbRowChanged;
+            public event avai_bookRowChangeEventHandler avai_bookRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event stu_sbRowChangeEventHandler stu_sbRowDeleting;
+            public event avai_bookRowChangeEventHandler avai_bookRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event stu_sbRowChangeEventHandler stu_sbRowDeleted;
+            public event avai_bookRowChangeEventHandler avai_bookRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addstu_sbRow(stu_sbRow row) {
+            public void Addavai_bookRow(avai_bookRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public stu_sbRow Addstu_sbRow(string sno, string isbn, int borrow_num, System.DateTime borrow_time, string b_name) {
-                stu_sbRow rowstu_sbRow = ((stu_sbRow)(this.NewRow()));
+            public avai_bookRow Addavai_bookRow(string isbn, string b_name, System.DateTime b_publish_time, string b_author, int b_num, int b_pop) {
+                avai_bookRow rowavai_bookRow = ((avai_bookRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        sno,
                         isbn,
-                        borrow_num,
-                        borrow_time,
-                        b_name};
-                rowstu_sbRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowstu_sbRow);
-                return rowstu_sbRow;
+                        b_name,
+                        b_publish_time,
+                        b_author,
+                        b_num,
+                        b_pop};
+                rowavai_bookRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowavai_bookRow);
+                return rowavai_bookRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public stu_sbRow FindBysnoisbnborrow_time(string sno, string isbn, System.DateTime borrow_time) {
-                return ((stu_sbRow)(this.Rows.Find(new object[] {
-                            sno,
-                            isbn,
-                            borrow_time})));
+            public avai_bookRow FindByisbn(string isbn) {
+                return ((avai_bookRow)(this.Rows.Find(new object[] {
+                            isbn})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                stu_sbDataTable cln = ((stu_sbDataTable)(base.Clone()));
+                avai_bookDataTable cln = ((avai_bookDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -432,68 +441,68 @@ namespace 数据库实验 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new stu_sbDataTable();
+                return new avai_bookDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnsno = base.Columns["sno"];
                 this.columnisbn = base.Columns["isbn"];
-                this.columnborrow_num = base.Columns["borrow_num"];
-                this.columnborrow_time = base.Columns["borrow_time"];
                 this.columnb_name = base.Columns["b_name"];
+                this.columnb_publish_time = base.Columns["b_publish_time"];
+                this.columnb_author = base.Columns["b_author"];
+                this.columnb_num = base.Columns["b_num"];
+                this.columnb_pop = base.Columns["b_pop"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnsno = new global::System.Data.DataColumn("sno", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsno);
                 this.columnisbn = new global::System.Data.DataColumn("isbn", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnisbn);
-                this.columnborrow_num = new global::System.Data.DataColumn("borrow_num", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnborrow_num);
-                this.columnborrow_time = new global::System.Data.DataColumn("borrow_time", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnborrow_time);
                 this.columnb_name = new global::System.Data.DataColumn("b_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnb_name);
+                this.columnb_publish_time = new global::System.Data.DataColumn("b_publish_time", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnb_publish_time);
+                this.columnb_author = new global::System.Data.DataColumn("b_author", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnb_author);
+                this.columnb_num = new global::System.Data.DataColumn("b_num", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnb_num);
+                this.columnb_pop = new global::System.Data.DataColumn("b_pop", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnb_pop);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnsno,
-                                this.columnisbn,
-                                this.columnborrow_time}, true));
-                this.columnsno.AllowDBNull = false;
-                this.columnsno.MaxLength = 10;
+                                this.columnisbn}, true));
                 this.columnisbn.AllowDBNull = false;
+                this.columnisbn.Unique = true;
                 this.columnisbn.MaxLength = 13;
-                this.columnborrow_time.AllowDBNull = false;
                 this.columnb_name.MaxLength = 15;
+                this.columnb_author.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public stu_sbRow Newstu_sbRow() {
-                return ((stu_sbRow)(this.NewRow()));
+            public avai_bookRow Newavai_bookRow() {
+                return ((avai_bookRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new stu_sbRow(builder);
+                return new avai_bookRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(stu_sbRow);
+                return typeof(avai_bookRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.stu_sbRowChanged != null)) {
-                    this.stu_sbRowChanged(this, new stu_sbRowChangeEvent(((stu_sbRow)(e.Row)), e.Action));
+                if ((this.avai_bookRowChanged != null)) {
+                    this.avai_bookRowChanged(this, new avai_bookRowChangeEvent(((avai_bookRow)(e.Row)), e.Action));
                 }
             }
             
@@ -501,8 +510,8 @@ namespace 数据库实验 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.stu_sbRowChanging != null)) {
-                    this.stu_sbRowChanging(this, new stu_sbRowChangeEvent(((stu_sbRow)(e.Row)), e.Action));
+                if ((this.avai_bookRowChanging != null)) {
+                    this.avai_bookRowChanging(this, new avai_bookRowChangeEvent(((avai_bookRow)(e.Row)), e.Action));
                 }
             }
             
@@ -510,8 +519,8 @@ namespace 数据库实验 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.stu_sbRowDeleted != null)) {
-                    this.stu_sbRowDeleted(this, new stu_sbRowChangeEvent(((stu_sbRow)(e.Row)), e.Action));
+                if ((this.avai_bookRowDeleted != null)) {
+                    this.avai_bookRowDeleted(this, new avai_bookRowChangeEvent(((avai_bookRow)(e.Row)), e.Action));
                 }
             }
             
@@ -519,14 +528,14 @@ namespace 数据库实验 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.stu_sbRowDeleting != null)) {
-                    this.stu_sbRowDeleting(this, new stu_sbRowChangeEvent(((stu_sbRow)(e.Row)), e.Action));
+                if ((this.avai_bookRowDeleting != null)) {
+                    this.avai_bookRowDeleting(this, new avai_bookRowChangeEvent(((avai_bookRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removestu_sbRow(stu_sbRow row) {
+            public void Removeavai_bookRow(avai_bookRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -535,7 +544,7 @@ namespace 数据库实验 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                book_systemDataSet3 ds = new book_systemDataSet3();
+                book_systemDataSet4 ds = new book_systemDataSet4();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -553,7 +562,7 @@ namespace 数据库实验 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "stu_sbDataTable";
+                attribute2.FixedValue = "avai_bookDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -597,63 +606,25 @@ namespace 数据库实验 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class stu_sbRow : global::System.Data.DataRow {
+        public partial class avai_bookRow : global::System.Data.DataRow {
             
-            private stu_sbDataTable tablestu_sb;
+            private avai_bookDataTable tableavai_book;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal stu_sbRow(global::System.Data.DataRowBuilder rb) : 
+            internal avai_bookRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablestu_sb = ((stu_sbDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string sno {
-                get {
-                    return ((string)(this[this.tablestu_sb.snoColumn]));
-                }
-                set {
-                    this[this.tablestu_sb.snoColumn] = value;
-                }
+                this.tableavai_book = ((avai_bookDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string isbn {
                 get {
-                    return ((string)(this[this.tablestu_sb.isbnColumn]));
+                    return ((string)(this[this.tableavai_book.isbnColumn]));
                 }
                 set {
-                    this[this.tablestu_sb.isbnColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int borrow_num {
-                get {
-                    try {
-                        return ((int)(this[this.tablestu_sb.borrow_numColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“stu_sb”中列“borrow_num”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tablestu_sb.borrow_numColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime borrow_time {
-                get {
-                    return ((global::System.DateTime)(this[this.tablestu_sb.borrow_timeColumn]));
-                }
-                set {
-                    this[this.tablestu_sb.borrow_timeColumn] = value;
+                    this[this.tableavai_book.isbnColumn] = value;
                 }
             }
             
@@ -662,39 +633,139 @@ namespace 数据库实验 {
             public string b_name {
                 get {
                     try {
-                        return ((string)(this[this.tablestu_sb.b_nameColumn]));
+                        return ((string)(this[this.tableavai_book.b_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“stu_sb”中列“b_name”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“avai_book”中列“b_name”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tablestu_sb.b_nameColumn] = value;
+                    this[this.tableavai_book.b_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isborrow_numNull() {
-                return this.IsNull(this.tablestu_sb.borrow_numColumn);
+            public System.DateTime b_publish_time {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableavai_book.b_publish_timeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“avai_book”中列“b_publish_time”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableavai_book.b_publish_timeColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setborrow_numNull() {
-                this[this.tablestu_sb.borrow_numColumn] = global::System.Convert.DBNull;
+            public string b_author {
+                get {
+                    try {
+                        return ((string)(this[this.tableavai_book.b_authorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“avai_book”中列“b_author”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableavai_book.b_authorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int b_num {
+                get {
+                    try {
+                        return ((int)(this[this.tableavai_book.b_numColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“avai_book”中列“b_num”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableavai_book.b_numColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int b_pop {
+                get {
+                    try {
+                        return ((int)(this[this.tableavai_book.b_popColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“avai_book”中列“b_pop”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableavai_book.b_popColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isb_nameNull() {
-                return this.IsNull(this.tablestu_sb.b_nameColumn);
+                return this.IsNull(this.tableavai_book.b_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setb_nameNull() {
-                this[this.tablestu_sb.b_nameColumn] = global::System.Convert.DBNull;
+                this[this.tableavai_book.b_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isb_publish_timeNull() {
+                return this.IsNull(this.tableavai_book.b_publish_timeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setb_publish_timeNull() {
+                this[this.tableavai_book.b_publish_timeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isb_authorNull() {
+                return this.IsNull(this.tableavai_book.b_authorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setb_authorNull() {
+                this[this.tableavai_book.b_authorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isb_numNull() {
+                return this.IsNull(this.tableavai_book.b_numColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setb_numNull() {
+                this[this.tableavai_book.b_numColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isb_popNull() {
+                return this.IsNull(this.tableavai_book.b_popColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setb_popNull() {
+                this[this.tableavai_book.b_popColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -702,22 +773,22 @@ namespace 数据库实验 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class stu_sbRowChangeEvent : global::System.EventArgs {
+        public class avai_bookRowChangeEvent : global::System.EventArgs {
             
-            private stu_sbRow eventRow;
+            private avai_bookRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public stu_sbRowChangeEvent(stu_sbRow row, global::System.Data.DataRowAction action) {
+            public avai_bookRowChangeEvent(avai_bookRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public stu_sbRow Row {
+            public avai_bookRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -733,7 +804,7 @@ namespace 数据库实验 {
         }
     }
 }
-namespace 数据库实验.book_systemDataSet3TableAdapters {
+namespace 数据库实验.book_systemDataSet4TableAdapters {
     
     
     /// <summary>
@@ -745,7 +816,7 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class stu_sbTableAdapter : global::System.ComponentModel.Component {
+    public partial class avai_bookTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -759,7 +830,7 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public stu_sbTableAdapter() {
+        public avai_bookTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -856,12 +927,13 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "stu_sb";
-            tableMapping.ColumnMappings.Add("sno", "sno");
+            tableMapping.DataSetTable = "avai_book";
             tableMapping.ColumnMappings.Add("isbn", "isbn");
-            tableMapping.ColumnMappings.Add("borrow_num", "borrow_num");
-            tableMapping.ColumnMappings.Add("borrow_time", "borrow_time");
             tableMapping.ColumnMappings.Add("b_name", "b_name");
+            tableMapping.ColumnMappings.Add("b_publish_time", "b_publish_time");
+            tableMapping.ColumnMappings.Add("b_author", "b_author");
+            tableMapping.ColumnMappings.Add("b_num", "b_num");
+            tableMapping.ColumnMappings.Add("b_pop", "b_pop");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -878,8 +950,8 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `sno`, `isbn`, `borrow_num`, `borrow_time`, `b_name` FROM `book_system`.`s" +
-                "tu_sb`";
+            this._commandCollection[0].CommandText = "SELECT `isbn`, `b_name`, `b_publish_time`, `b_author`, `b_num`, `b_pop` FROM `boo" +
+                "k_system`.`avai_book`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -887,7 +959,7 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(book_systemDataSet3.stu_sbDataTable dataTable) {
+        public virtual int Fill(book_systemDataSet4.avai_bookDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -900,9 +972,9 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual book_systemDataSet3.stu_sbDataTable GetData() {
+        public virtual book_systemDataSet4.avai_bookDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            book_systemDataSet3.stu_sbDataTable dataTable = new book_systemDataSet3.stu_sbDataTable();
+            book_systemDataSet4.avai_bookDataTable dataTable = new book_systemDataSet4.avai_bookDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -976,7 +1048,7 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(book_systemDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(book_systemDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -986,7 +1058,7 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(book_systemDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(book_systemDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -996,7 +1068,7 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(book_systemDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(book_systemDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1030,7 +1102,7 @@ namespace 数据库实验.book_systemDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(book_systemDataSet3 dataSet) {
+        public virtual int UpdateAll(book_systemDataSet4 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

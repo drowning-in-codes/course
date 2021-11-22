@@ -38,16 +38,17 @@ namespace 数据库实验
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiButton2 = new Sunny.UI.UIButton();
             this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
-            this.book_systemDataSet3 = new 数据库实验.book_systemDataSet3();
+            this.book_systemDataSet2 = new 数据库实验.book_systemDataSet2();
             this.stusbBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stu_sbTableAdapter = new 数据库实验.book_systemDataSet3TableAdapters.stu_sbTableAdapter();
+            this.stu_sbTableAdapter = new 数据库实验.book_systemDataSet2TableAdapters.stu_sbTableAdapter();
             this.snoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isbnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borrownumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borrowtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stusbBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +99,7 @@ namespace 数据库实验
             this.isbnDataGridViewTextBoxColumn,
             this.borrownumDataGridViewTextBoxColumn,
             this.borrowtimeDataGridViewTextBoxColumn,
+            this.backtimeDataGridViewTextBoxColumn,
             this.bnameDataGridViewTextBoxColumn});
             this.uiDataGridView1.DataSource = this.stusbBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -132,15 +134,15 @@ namespace 数据库实验
             this.uiDataGridView1.Size = new System.Drawing.Size(796, 197);
             this.uiDataGridView1.TabIndex = 0;
             // 
-            // book_systemDataSet3
+            // book_systemDataSet2
             // 
-            this.book_systemDataSet3.DataSetName = "book_systemDataSet3";
-            this.book_systemDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.book_systemDataSet2.DataSetName = "book_systemDataSet2";
+            this.book_systemDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // stusbBindingSource
             // 
             this.stusbBindingSource.DataMember = "stu_sb";
-            this.stusbBindingSource.DataSource = this.book_systemDataSet3;
+            this.stusbBindingSource.DataSource = this.book_systemDataSet2;
             // 
             // stu_sbTableAdapter
             // 
@@ -178,6 +180,14 @@ namespace 数据库实验
             this.borrowtimeDataGridViewTextBoxColumn.Name = "borrowtimeDataGridViewTextBoxColumn";
             this.borrowtimeDataGridViewTextBoxColumn.Width = 162;
             // 
+            // backtimeDataGridViewTextBoxColumn
+            // 
+            this.backtimeDataGridViewTextBoxColumn.DataPropertyName = "back_time";
+            this.backtimeDataGridViewTextBoxColumn.HeaderText = "back_time";
+            this.backtimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.backtimeDataGridViewTextBoxColumn.Name = "backtimeDataGridViewTextBoxColumn";
+            this.backtimeDataGridViewTextBoxColumn.Width = 136;
+            // 
             // bnameDataGridViewTextBoxColumn
             // 
             this.bnameDataGridViewTextBoxColumn.DataPropertyName = "b_name";
@@ -201,7 +211,7 @@ namespace 数据库实验
             this.Text = "havebook";
             this.Load += new System.EventHandler(this.havebook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stusbBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -211,13 +221,14 @@ namespace 数据库实验
         private Sunny.UI.UIButton uiButton1;
         private Sunny.UI.UIButton uiButton2;
         private Sunny.UI.UIDataGridView uiDataGridView1;
-        private book_systemDataSet3 book_systemDataSet3;
+        private book_systemDataSet2 book_systemDataSet2;
         private System.Windows.Forms.BindingSource stusbBindingSource;
-        private book_systemDataSet3TableAdapters.stu_sbTableAdapter stu_sbTableAdapter;
+        private book_systemDataSet2TableAdapters.stu_sbTableAdapter stu_sbTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn snoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn isbnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn borrownumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn borrowtimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn backtimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bnameDataGridViewTextBoxColumn;
     }
 }
