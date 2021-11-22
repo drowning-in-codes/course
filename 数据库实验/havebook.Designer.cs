@@ -47,6 +47,8 @@ namespace 数据库实验
             this.borrowtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isbackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isbackallowedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stusbBindingSource)).BeginInit();
@@ -81,7 +83,6 @@ namespace 数据库实验
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.uiDataGridView1.AutoGenerateColumns = false;
-            this.uiDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.uiDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -100,7 +101,9 @@ namespace 数据库实验
             this.borrownumDataGridViewTextBoxColumn,
             this.borrowtimeDataGridViewTextBoxColumn,
             this.backtimeDataGridViewTextBoxColumn,
-            this.bnameDataGridViewTextBoxColumn});
+            this.bnameDataGridViewTextBoxColumn,
+            this.isbackDataGridViewTextBoxColumn,
+            this.isbackallowedDataGridViewTextBoxColumn});
             this.uiDataGridView1.DataSource = this.stusbBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -131,8 +134,8 @@ namespace 数据库实验
             this.uiDataGridView1.RowTemplate.Height = 27;
             this.uiDataGridView1.SelectedIndex = -1;
             this.uiDataGridView1.ShowGridLine = true;
-            this.uiDataGridView1.Size = new System.Drawing.Size(796, 197);
-            this.uiDataGridView1.TabIndex = 0;
+            this.uiDataGridView1.Size = new System.Drawing.Size(796, 236);
+            this.uiDataGridView1.TabIndex = 3;
             // 
             // book_systemDataSet2
             // 
@@ -154,7 +157,7 @@ namespace 数据库实验
             this.snoDataGridViewTextBoxColumn.HeaderText = "sno";
             this.snoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.snoDataGridViewTextBoxColumn.Name = "snoDataGridViewTextBoxColumn";
-            this.snoDataGridViewTextBoxColumn.Width = 74;
+            this.snoDataGridViewTextBoxColumn.Width = 125;
             // 
             // isbnDataGridViewTextBoxColumn
             // 
@@ -162,7 +165,7 @@ namespace 数据库实验
             this.isbnDataGridViewTextBoxColumn.HeaderText = "isbn";
             this.isbnDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.isbnDataGridViewTextBoxColumn.Name = "isbnDataGridViewTextBoxColumn";
-            this.isbnDataGridViewTextBoxColumn.Width = 79;
+            this.isbnDataGridViewTextBoxColumn.Width = 125;
             // 
             // borrownumDataGridViewTextBoxColumn
             // 
@@ -170,7 +173,7 @@ namespace 数据库实验
             this.borrownumDataGridViewTextBoxColumn.HeaderText = "borrow_num";
             this.borrownumDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.borrownumDataGridViewTextBoxColumn.Name = "borrownumDataGridViewTextBoxColumn";
-            this.borrownumDataGridViewTextBoxColumn.Width = 163;
+            this.borrownumDataGridViewTextBoxColumn.Width = 125;
             // 
             // borrowtimeDataGridViewTextBoxColumn
             // 
@@ -178,7 +181,7 @@ namespace 数据库实验
             this.borrowtimeDataGridViewTextBoxColumn.HeaderText = "borrow_time";
             this.borrowtimeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.borrowtimeDataGridViewTextBoxColumn.Name = "borrowtimeDataGridViewTextBoxColumn";
-            this.borrowtimeDataGridViewTextBoxColumn.Width = 162;
+            this.borrowtimeDataGridViewTextBoxColumn.Width = 125;
             // 
             // backtimeDataGridViewTextBoxColumn
             // 
@@ -186,7 +189,7 @@ namespace 数据库实验
             this.backtimeDataGridViewTextBoxColumn.HeaderText = "back_time";
             this.backtimeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.backtimeDataGridViewTextBoxColumn.Name = "backtimeDataGridViewTextBoxColumn";
-            this.backtimeDataGridViewTextBoxColumn.Width = 136;
+            this.backtimeDataGridViewTextBoxColumn.Width = 125;
             // 
             // bnameDataGridViewTextBoxColumn
             // 
@@ -194,16 +197,32 @@ namespace 数据库实验
             this.bnameDataGridViewTextBoxColumn.HeaderText = "b_name";
             this.bnameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.bnameDataGridViewTextBoxColumn.Name = "bnameDataGridViewTextBoxColumn";
-            this.bnameDataGridViewTextBoxColumn.Width = 115;
+            this.bnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // isbackDataGridViewTextBoxColumn
+            // 
+            this.isbackDataGridViewTextBoxColumn.DataPropertyName = "is_back";
+            this.isbackDataGridViewTextBoxColumn.HeaderText = "is_back";
+            this.isbackDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.isbackDataGridViewTextBoxColumn.Name = "isbackDataGridViewTextBoxColumn";
+            this.isbackDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // isbackallowedDataGridViewTextBoxColumn
+            // 
+            this.isbackallowedDataGridViewTextBoxColumn.DataPropertyName = "is_back_allowed";
+            this.isbackallowedDataGridViewTextBoxColumn.HeaderText = "is_back_allowed";
+            this.isbackallowedDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.isbackallowedDataGridViewTextBoxColumn.Name = "isbackallowedDataGridViewTextBoxColumn";
+            this.isbackallowedDataGridViewTextBoxColumn.Width = 125;
             // 
             // havebook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.uiDataGridView1);
             this.Controls.Add(this.uiButton2);
             this.Controls.Add(this.uiButton1);
-            this.Controls.Add(this.uiDataGridView1);
             this.Name = "havebook";
             this.Padding = new System.Windows.Forms.Padding(2, 35, 2, 2);
             this.ShowDragStretch = true;
@@ -230,5 +249,7 @@ namespace 数据库实验
         private System.Windows.Forms.DataGridViewTextBoxColumn borrowtimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn backtimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isbackDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isbackallowedDataGridViewTextBoxColumn;
     }
 }

@@ -25,7 +25,13 @@ namespace 数据库实验
 
         private void havebook_Load(object sender, EventArgs e)
         {
-           
+            // TODO: 这行代码将数据加载到表“book_systemDataSet2.stu_sb”中。您可以根据需要移动或删除它。
+            this.stu_sbTableAdapter.Fill(this.book_systemDataSet2.stu_sb);
+            // TODO: 这行代码将数据加载到表“book_systemDataSet2.stu_sb”中。您可以根据需要移动或删除它。
+            this.stu_sbTableAdapter.Fill(this.book_systemDataSet2.stu_sb);
+            // TODO: 这行代码将数据加载到表“book_systemDataSet2.stu_sb”中。您可以根据需要移动或删除它。
+            this.stu_sbTableAdapter.Fill(this.book_systemDataSet2.stu_sb);
+
 
             try
             {// TODO: 这行代码将数据加载到表“book_systemDataSet3.stu_sb”中。您可以根据需要移动或删除它。

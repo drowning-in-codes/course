@@ -291,6 +291,10 @@ namespace 数据库实验 {
             
             private global::System.Data.DataColumn columnb_name;
             
+            private global::System.Data.DataColumn columnis_back;
+            
+            private global::System.Data.DataColumn columnis_back_allowed;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public stu_sbDataTable() {
@@ -374,6 +378,22 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn is_backColumn {
+                get {
+                    return this.columnis_back;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn is_back_allowedColumn {
+                get {
+                    return this.columnis_back_allowed;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +429,7 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public stu_sbRow Addstu_sbRow(string sno, string isbn, int borrow_num, System.DateTime borrow_time, System.DateTime back_time, string b_name) {
+            public stu_sbRow Addstu_sbRow(string sno, string isbn, int borrow_num, System.DateTime borrow_time, System.DateTime back_time, string b_name, int is_back, int is_back_allowed) {
                 stu_sbRow rowstu_sbRow = ((stu_sbRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         sno,
@@ -417,7 +437,9 @@ namespace 数据库实验 {
                         borrow_num,
                         borrow_time,
                         back_time,
-                        b_name};
+                        b_name,
+                        is_back,
+                        is_back_allowed};
                 rowstu_sbRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstu_sbRow);
                 return rowstu_sbRow;
@@ -455,6 +477,8 @@ namespace 数据库实验 {
                 this.columnborrow_time = base.Columns["borrow_time"];
                 this.columnback_time = base.Columns["back_time"];
                 this.columnb_name = base.Columns["b_name"];
+                this.columnis_back = base.Columns["is_back"];
+                this.columnis_back_allowed = base.Columns["is_back_allowed"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -472,6 +496,10 @@ namespace 数据库实验 {
                 base.Columns.Add(this.columnback_time);
                 this.columnb_name = new global::System.Data.DataColumn("b_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnb_name);
+                this.columnis_back = new global::System.Data.DataColumn("is_back", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_back);
+                this.columnis_back_allowed = new global::System.Data.DataColumn("is_back_allowed", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_back_allowed);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnsno,
                                 this.columnisbn,
@@ -705,6 +733,38 @@ namespace 数据库实验 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int is_back {
+                get {
+                    try {
+                        return ((int)(this[this.tablestu_sb.is_backColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“stu_sb”中列“is_back”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tablestu_sb.is_backColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int is_back_allowed {
+                get {
+                    try {
+                        return ((int)(this[this.tablestu_sb.is_back_allowedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“stu_sb”中列“is_back_allowed”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tablestu_sb.is_back_allowedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isborrow_numNull() {
                 return this.IsNull(this.tablestu_sb.borrow_numColumn);
             }
@@ -737,6 +797,30 @@ namespace 数据库实验 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setb_nameNull() {
                 this[this.tablestu_sb.b_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isis_backNull() {
+                return this.IsNull(this.tablestu_sb.is_backColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setis_backNull() {
+                this[this.tablestu_sb.is_backColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isis_back_allowedNull() {
+                return this.IsNull(this.tablestu_sb.is_back_allowedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setis_back_allowedNull() {
+                this[this.tablestu_sb.is_back_allowedColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -905,6 +989,8 @@ namespace 数据库实验.book_systemDataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("borrow_time", "borrow_time");
             tableMapping.ColumnMappings.Add("back_time", "back_time");
             tableMapping.ColumnMappings.Add("b_name", "b_name");
+            tableMapping.ColumnMappings.Add("is_back", "is_back");
+            tableMapping.ColumnMappings.Add("is_back_allowed", "is_back_allowed");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -921,8 +1007,8 @@ namespace 数据库实验.book_systemDataSet2TableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `sno`, `isbn`, `borrow_num`, `borrow_time`, `back_time`, `b_name` FROM `bo" +
-                "ok_system`.`stu_sb`";
+            this._commandCollection[0].CommandText = "SELECT `sno`, `isbn`, `borrow_num`, `borrow_time`, `back_time`, `b_name`, `is_bac" +
+                "k`, `is_back_allowed` FROM `book_system`.`stu_sb`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

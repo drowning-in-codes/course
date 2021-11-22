@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="book_systemConnectionString2 (Settings)" DbObjectName="book_system.stu_sb" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `sno`, `isbn`, `borrow_num`, `borrow_time`, `back_time`, `b_name` FROM `book_system`.`stu_sb`</CommandText>
+                    <CommandText>SELECT `sno`, `isbn`, `borrow_num`, `borrow_time`, `back_time`, `b_name`, `is_back`, `is_back_allowed` FROM `book_system`.`stu_sb`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -25,6 +25,8 @@
               <Mapping SourceColumn="borrow_time" DataSetColumn="borrow_time" />
               <Mapping SourceColumn="back_time" DataSetColumn="back_time" />
               <Mapping SourceColumn="b_name" DataSetColumn="b_name" />
+              <Mapping SourceColumn="is_back" DataSetColumn="is_back" />
+              <Mapping SourceColumn="is_back_allowed" DataSetColumn="is_back_allowed" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -63,6 +65,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="is_back" msprop:Generator_ColumnVarNameInTable="columnis_back" msprop:Generator_ColumnPropNameInRow="is_back" msprop:Generator_ColumnPropNameInTable="is_backColumn" msprop:Generator_UserColumnName="is_back" type="xs:int" minOccurs="0" />
+              <xs:element name="is_back_allowed" msprop:Generator_ColumnVarNameInTable="columnis_back_allowed" msprop:Generator_ColumnPropNameInRow="is_back_allowed" msprop:Generator_ColumnPropNameInTable="is_back_allowedColumn" msprop:Generator_UserColumnName="is_back_allowed" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

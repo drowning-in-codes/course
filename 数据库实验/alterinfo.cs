@@ -27,21 +27,19 @@ namespace 数据库实验
 
         private void uiButton1_Click(object sender, EventArgs e)
         {
-            if(this.uiCheckBox1.Checked)
-            {
-                info[0] = true;
-            }
-            if (this.uiCheckBox2.Checked)
-            {
-                info[1] = true;
-            }
-            if (this.uiCheckBox3.Checked)
-            {
-                info[2] = true;
-            }
+            info[0] = this.uiCheckBox1.Checked;
+            info[1] = this.uiCheckBox2.Checked ;
+            info[2] = this.uiCheckBox3.Checked;
 
             UIMessageTip.ShowOk("更改成功");
             this.Close();
+        }
+
+        private void alterinfo_Load(object sender, EventArgs e)
+        {
+            this.uiCheckBox1.Checked = info[0] ;
+            this.uiCheckBox2.Checked = info[1] ;
+            this.uiCheckBox3.Checked = info[2] ;
         }
     }
 }

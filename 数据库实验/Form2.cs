@@ -66,9 +66,10 @@ namespace 数据库实验
             string book_sno = this.comboBox1.Text;
             string book_num = this.uiComboBox1.Text;
             string sql = "insert into sb_info (sno,isbn,borrow_time,borrow_num,back_time) values (\"{0}\",\"{1}\",\"{2}\",{3},\"{4}\");";
-            MySqlCommand cmd = new MySqlCommand(string.Format(sql, this.username, book_sno,DateTime.Now.DateTimeString(),book_num,DateTime.Now.AddDays(Double.Parse(borrow_time)).DateTimeString()), con);
+            
             try
             {
+                MySqlCommand cmd = new MySqlCommand(string.Format(sql, this.username, book_sno, DateTime.Now.DateTimeString(), book_num, DateTime.Now.AddDays(Double.Parse(borrow_time)).DateTimeString()), con);
                 cmd.ExecuteNonQuery();
             }
             catch(Exception ex)
@@ -178,18 +179,11 @@ namespace 数据库实验
             
         }
 
-        private void uiComboBox3_TextChanged(object sender, EventArgs e)
-        {
-            if (int.Parse(this.uiComboBox2.Text) > 40)
-            {
-                UIMessageTip.ShowWarning("您续借的时间未免太长了");
-            }
-            this.uiComboBox2.Text = "1";
-        }
+       
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            string sql = "select back_time from student,books,sb_info where student.sno=sb_info.sno and books.isbn=sb_info.isbn and is_back=0 and is_back_allowed=0 and borrow_num>0;";
+            string sql = "select back_time from student,books,sb_info where student.sno=sb_info.sno and books.isbn=sb_info.isbn and is_back=0 and borrow_num>0;";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             MySqlDataReader dr = null;
             try
