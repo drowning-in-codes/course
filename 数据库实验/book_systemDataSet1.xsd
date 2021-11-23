@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="book_systemConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="book_systemConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.数据库实验.Properties.Settings.GlobalReference.Default.book_systemConnectionString2" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="book_systemConnectionString2" IsAppSettingsProperty="true" Modifier="Assembly" Name="book_systemConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.图书管理系统.Properties.Settings.GlobalReference.Default.book_systemConnectionString2" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sb_infoTableAdapter" GeneratorDataComponentClassName="sb_infoTableAdapter" Name="sb_info" UserDataComponentName="sb_infoTableAdapter">
@@ -57,7 +57,7 @@
   <xs:element name="book_systemDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="book_systemDataSet1" msprop:Generator_UserDSName="book_systemDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="sb_info" msprop:Generator_TableClassName="sb_infoDataTable" msprop:Generator_TableVarName="tablesb_info" msprop:Generator_TablePropName="sb_info" msprop:Generator_RowDeletingName="sb_infoRowDeleting" msprop:Generator_RowChangingName="sb_infoRowChanging" msprop:Generator_RowEvHandlerName="sb_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="sb_infoRowDeleted" msprop:Generator_UserTableName="sb_info" msprop:Generator_RowChangedName="sb_infoRowChanged" msprop:Generator_RowEvArgName="sb_infoRowChangeEvent" msprop:Generator_RowClassName="sb_infoRow">
+        <xs:element name="sb_info" msprop:Generator_TableClassName="sb_infoDataTable" msprop:Generator_TableVarName="tablesb_info" msprop:Generator_RowChangedName="sb_infoRowChanged" msprop:Generator_TablePropName="sb_info" msprop:Generator_RowDeletingName="sb_infoRowDeleting" msprop:Generator_RowChangingName="sb_infoRowChanging" msprop:Generator_RowEvHandlerName="sb_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="sb_infoRowDeleted" msprop:Generator_RowClassName="sb_infoRow" msprop:Generator_UserTableName="sb_info" msprop:Generator_RowEvArgName="sb_infoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="sno" msprop:Generator_ColumnVarNameInTable="columnsno" msprop:Generator_ColumnPropNameInRow="sno" msprop:Generator_ColumnPropNameInTable="snoColumn" msprop:Generator_UserColumnName="sno" minOccurs="0">

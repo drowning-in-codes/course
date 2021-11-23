@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="book_systemConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="book_systemConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.数据库实验.Properties.Settings.GlobalReference.Default.book_systemConnectionString2" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="book_systemConnectionString2" IsAppSettingsProperty="true" Modifier="Assembly" Name="book_systemConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.图书管理系统.Properties.Settings.GlobalReference.Default.book_systemConnectionString2" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="avai_bookTableAdapter" GeneratorDataComponentClassName="avai_bookTableAdapter" Name="avai_book" UserDataComponentName="avai_bookTableAdapter">
@@ -36,7 +36,7 @@
   <xs:element name="book_systemDataSet4" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="book_systemDataSet4" msprop:Generator_UserDSName="book_systemDataSet4">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="avai_book" msprop:Generator_TableClassName="avai_bookDataTable" msprop:Generator_TableVarName="tableavai_book" msprop:Generator_TablePropName="avai_book" msprop:Generator_RowDeletingName="avai_bookRowDeleting" msprop:Generator_RowChangingName="avai_bookRowChanging" msprop:Generator_RowEvHandlerName="avai_bookRowChangeEventHandler" msprop:Generator_RowDeletedName="avai_bookRowDeleted" msprop:Generator_UserTableName="avai_book" msprop:Generator_RowChangedName="avai_bookRowChanged" msprop:Generator_RowEvArgName="avai_bookRowChangeEvent" msprop:Generator_RowClassName="avai_bookRow">
+        <xs:element name="avai_book" msprop:Generator_TableClassName="avai_bookDataTable" msprop:Generator_TableVarName="tableavai_book" msprop:Generator_RowChangedName="avai_bookRowChanged" msprop:Generator_TablePropName="avai_book" msprop:Generator_RowDeletingName="avai_bookRowDeleting" msprop:Generator_RowChangingName="avai_bookRowChanging" msprop:Generator_RowEvHandlerName="avai_bookRowChangeEventHandler" msprop:Generator_RowDeletedName="avai_bookRowDeleted" msprop:Generator_RowClassName="avai_bookRow" msprop:Generator_UserTableName="avai_book" msprop:Generator_RowEvArgName="avai_bookRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="isbn" msprop:Generator_ColumnVarNameInTable="columnisbn" msprop:Generator_ColumnPropNameInRow="isbn" msprop:Generator_ColumnPropNameInTable="isbnColumn" msprop:Generator_UserColumnName="isbn">

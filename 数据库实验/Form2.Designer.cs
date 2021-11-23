@@ -48,6 +48,9 @@ namespace 数据库实验
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.uiLabel6 = new Sunny.UI.UILabel();
+            this.uiLabel5 = new Sunny.UI.UILabel();
+            this.uiComboBox2 = new Sunny.UI.UIComboBox();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiComboBox1 = new Sunny.UI.UIComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -59,19 +62,16 @@ namespace 数据库实验
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
-            this.booksTableAdapter1 = new 数据库实验.book_systemDataSet_bookTableAdapters.booksTableAdapter();
-            this.uiComboBox2 = new Sunny.UI.UIComboBox();
-            this.uiLabel5 = new Sunny.UI.UILabel();
-            this.bpopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bpublishtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isbnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.book_systemDataSet4 = new 数据库实验.book_systemDataSet4();
+            this.bnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bpublishtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bpopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avaibookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.book_systemDataSet4 = new 数据库实验.book_systemDataSet4();
+            this.booksTableAdapter1 = new 数据库实验.book_systemDataSet_bookTableAdapters.booksTableAdapter();
             this.avai_bookTableAdapter = new 数据库实验.book_systemDataSet4TableAdapters.avai_bookTableAdapter();
-            this.uiLabel6 = new Sunny.UI.UILabel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -79,8 +79,8 @@ namespace 数据库实验
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet_book)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avaibookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -92,7 +92,7 @@ namespace 数据库实验
             this.设置ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(2, 35);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(796, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(796, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,20 +102,20 @@ namespace 数据库实验
             this.所借书籍ToolStripMenuItem,
             this.个人信息ToolStripMenuItem});
             this.查询ToolStripMenuItem.Name = "查询ToolStripMenuItem";
-            this.查询ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.查询ToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
             this.查询ToolStripMenuItem.Text = "查询";
             // 
             // 所借书籍ToolStripMenuItem
             // 
             this.所借书籍ToolStripMenuItem.Name = "所借书籍ToolStripMenuItem";
-            this.所借书籍ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.所借书籍ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.所借书籍ToolStripMenuItem.Text = "所借书籍";
             this.所借书籍ToolStripMenuItem.Click += new System.EventHandler(this.所借书籍ToolStripMenuItem_Click);
             // 
             // 个人信息ToolStripMenuItem
             // 
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
             this.个人信息ToolStripMenuItem.Click += new System.EventHandler(this.个人信息ToolStripMenuItem_Click);
             // 
@@ -124,7 +124,7 @@ namespace 数据库实验
             this.关于ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.用户权限ToolStripMenuItem});
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // 用户权限ToolStripMenuItem
@@ -137,7 +137,7 @@ namespace 数据库实验
             // 设置ToolStripMenuItem
             // 
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
             this.设置ToolStripMenuItem.Text = "设置";
             // 
             // statusStrip1
@@ -204,6 +204,47 @@ namespace 数据库实验
             this.uiGroupBox1.Text = "管理界面";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiGroupBox1.TitleAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // uiLabel6
+            // 
+            this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel6.Location = new System.Drawing.Point(261, 162);
+            this.uiLabel6.Name = "uiLabel6";
+            this.uiLabel6.Size = new System.Drawing.Size(198, 35);
+            this.uiLabel6.TabIndex = 11;
+            this.uiLabel6.Text = "续借时间固定为5天";
+            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel5
+            // 
+            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel5.Location = new System.Drawing.Point(319, 30);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel5.TabIndex = 10;
+            this.uiLabel5.Text = "借阅时间";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiComboBox2
+            // 
+            this.uiComboBox2.DataSource = null;
+            this.uiComboBox2.FillColor = System.Drawing.Color.White;
+            this.uiComboBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiComboBox2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "5",
+            "10",
+            "30"});
+            this.uiComboBox2.Location = new System.Drawing.Point(309, 58);
+            this.uiComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiComboBox2.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiComboBox2.Name = "uiComboBox2";
+            this.uiComboBox2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiComboBox2.Size = new System.Drawing.Size(150, 35);
+            this.uiComboBox2.TabIndex = 9;
+            this.uiComboBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboBox2.TextChanged += new System.EventHandler(this.uiComboBox2_TextChanged);
             // 
             // uiLabel4
             // 
@@ -351,7 +392,7 @@ namespace 数据库实验
             this.uiDataGridView1.EnableHeadersVisualStyles = false;
             this.uiDataGridView1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.Location = new System.Drawing.Point(2, 63);
+            this.uiDataGridView1.Location = new System.Drawing.Point(2, 65);
             this.uiDataGridView1.Name = "uiDataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
@@ -371,72 +412,13 @@ namespace 数据库实验
             this.uiDataGridView1.Size = new System.Drawing.Size(796, 150);
             this.uiDataGridView1.TabIndex = 3;
             // 
-            // booksTableAdapter1
+            // isbnDataGridViewTextBoxColumn
             // 
-            this.booksTableAdapter1.ClearBeforeFill = true;
-            // 
-            // uiComboBox2
-            // 
-            this.uiComboBox2.DataSource = null;
-            this.uiComboBox2.FillColor = System.Drawing.Color.White;
-            this.uiComboBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiComboBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "5",
-            "10",
-            "30"});
-            this.uiComboBox2.Location = new System.Drawing.Point(309, 58);
-            this.uiComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBox2.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiComboBox2.Name = "uiComboBox2";
-            this.uiComboBox2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox2.Size = new System.Drawing.Size(150, 35);
-            this.uiComboBox2.TabIndex = 9;
-            this.uiComboBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiComboBox2.TextChanged += new System.EventHandler(this.uiComboBox2_TextChanged);
-            // 
-            // uiLabel5
-            // 
-            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.Location = new System.Drawing.Point(319, 30);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(100, 23);
-            this.uiLabel5.TabIndex = 10;
-            this.uiLabel5.Text = "借阅时间";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // bpopDataGridViewTextBoxColumn
-            // 
-            this.bpopDataGridViewTextBoxColumn.DataPropertyName = "b_pop";
-            this.bpopDataGridViewTextBoxColumn.HeaderText = "b_pop";
-            this.bpopDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bpopDataGridViewTextBoxColumn.Name = "bpopDataGridViewTextBoxColumn";
-            this.bpopDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bnumDataGridViewTextBoxColumn
-            // 
-            this.bnumDataGridViewTextBoxColumn.DataPropertyName = "b_num";
-            this.bnumDataGridViewTextBoxColumn.HeaderText = "b_num";
-            this.bnumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bnumDataGridViewTextBoxColumn.Name = "bnumDataGridViewTextBoxColumn";
-            this.bnumDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bauthorDataGridViewTextBoxColumn
-            // 
-            this.bauthorDataGridViewTextBoxColumn.DataPropertyName = "b_author";
-            this.bauthorDataGridViewTextBoxColumn.HeaderText = "b_author";
-            this.bauthorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bauthorDataGridViewTextBoxColumn.Name = "bauthorDataGridViewTextBoxColumn";
-            this.bauthorDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // bpublishtimeDataGridViewTextBoxColumn
-            // 
-            this.bpublishtimeDataGridViewTextBoxColumn.DataPropertyName = "b_publish_time";
-            this.bpublishtimeDataGridViewTextBoxColumn.HeaderText = "b_publish_time";
-            this.bpublishtimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bpublishtimeDataGridViewTextBoxColumn.Name = "bpublishtimeDataGridViewTextBoxColumn";
-            this.bpublishtimeDataGridViewTextBoxColumn.Width = 125;
+            this.isbnDataGridViewTextBoxColumn.DataPropertyName = "isbn";
+            this.isbnDataGridViewTextBoxColumn.HeaderText = "isbn";
+            this.isbnDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.isbnDataGridViewTextBoxColumn.Name = "isbnDataGridViewTextBoxColumn";
+            this.isbnDataGridViewTextBoxColumn.Width = 125;
             // 
             // bnameDataGridViewTextBoxColumn
             // 
@@ -446,37 +428,55 @@ namespace 数据库实验
             this.bnameDataGridViewTextBoxColumn.Name = "bnameDataGridViewTextBoxColumn";
             this.bnameDataGridViewTextBoxColumn.Width = 125;
             // 
-            // isbnDataGridViewTextBoxColumn
+            // bpublishtimeDataGridViewTextBoxColumn
             // 
-            this.isbnDataGridViewTextBoxColumn.DataPropertyName = "isbn";
-            this.isbnDataGridViewTextBoxColumn.HeaderText = "isbn";
-            this.isbnDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.isbnDataGridViewTextBoxColumn.Name = "isbnDataGridViewTextBoxColumn";
-            this.isbnDataGridViewTextBoxColumn.Width = 125;
+            this.bpublishtimeDataGridViewTextBoxColumn.DataPropertyName = "b_publish_time";
+            this.bpublishtimeDataGridViewTextBoxColumn.HeaderText = "b_publish_time";
+            this.bpublishtimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bpublishtimeDataGridViewTextBoxColumn.Name = "bpublishtimeDataGridViewTextBoxColumn";
+            this.bpublishtimeDataGridViewTextBoxColumn.Width = 125;
             // 
-            // book_systemDataSet4
+            // bauthorDataGridViewTextBoxColumn
             // 
-            this.book_systemDataSet4.DataSetName = "book_systemDataSet4";
-            this.book_systemDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bauthorDataGridViewTextBoxColumn.DataPropertyName = "b_author";
+            this.bauthorDataGridViewTextBoxColumn.HeaderText = "b_author";
+            this.bauthorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bauthorDataGridViewTextBoxColumn.Name = "bauthorDataGridViewTextBoxColumn";
+            this.bauthorDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bnumDataGridViewTextBoxColumn
+            // 
+            this.bnumDataGridViewTextBoxColumn.DataPropertyName = "b_num";
+            this.bnumDataGridViewTextBoxColumn.HeaderText = "b_num";
+            this.bnumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bnumDataGridViewTextBoxColumn.Name = "bnumDataGridViewTextBoxColumn";
+            this.bnumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bpopDataGridViewTextBoxColumn
+            // 
+            this.bpopDataGridViewTextBoxColumn.DataPropertyName = "b_pop";
+            this.bpopDataGridViewTextBoxColumn.HeaderText = "b_pop";
+            this.bpopDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bpopDataGridViewTextBoxColumn.Name = "bpopDataGridViewTextBoxColumn";
+            this.bpopDataGridViewTextBoxColumn.Width = 125;
             // 
             // avaibookBindingSource
             // 
             this.avaibookBindingSource.DataMember = "avai_book";
             this.avaibookBindingSource.DataSource = this.book_systemDataSet4;
             // 
+            // book_systemDataSet4
+            // 
+            this.book_systemDataSet4.DataSetName = "book_systemDataSet4";
+            this.book_systemDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // booksTableAdapter1
+            // 
+            this.booksTableAdapter1.ClearBeforeFill = true;
+            // 
             // avai_bookTableAdapter
             // 
             this.avai_bookTableAdapter.ClearBeforeFill = true;
-            // 
-            // uiLabel6
-            // 
-            this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel6.Location = new System.Drawing.Point(261, 162);
-            this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(198, 35);
-            this.uiLabel6.TabIndex = 11;
-            this.uiLabel6.Text = "续借时间固定为5天";
-            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // timer2
             // 
@@ -510,8 +510,8 @@ namespace 数据库实验
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet_book)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avaibookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
