@@ -73,7 +73,7 @@ namespace 数据库实验
             this.ShowInTaskbar = true;
             this.ShowRadius = false;
             this.ShowTitle = true;
-            this.Text = "loginform";
+            this.Text = "登录窗口";
             this.Title = "图书馆借阅系统";
             this.ButtonLoginClick += new System.EventHandler(this.loginform_ButtonLoginClick);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.loginform_FormClosed);

@@ -281,13 +281,11 @@ namespace 数据库实验
             // uiButton3
             // 
             this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton3.FillColor = System.Drawing.Color.Red;
             this.uiButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton3.Location = new System.Drawing.Point(529, 174);
             this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton3.Name = "uiButton3";
             this.uiButton3.Size = new System.Drawing.Size(100, 35);
-            this.uiButton3.Style = Sunny.UI.UIStyle.Custom;
             this.uiButton3.TabIndex = 2;
             this.uiButton3.Text = "删除书籍";
             this.uiButton3.Click += new System.EventHandler(this.uiButton3_Click);
@@ -295,13 +293,11 @@ namespace 数据库实验
             // uiButton2
             // 
             this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton2.FillColor = System.Drawing.Color.Blue;
             this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton2.Location = new System.Drawing.Point(511, 86);
             this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton2.Name = "uiButton2";
             this.uiButton2.Size = new System.Drawing.Size(100, 35);
-            this.uiButton2.Style = Sunny.UI.UIStyle.Custom;
             this.uiButton2.TabIndex = 1;
             this.uiButton2.Text = "增加书籍";
             this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
@@ -309,13 +305,11 @@ namespace 数据库实验
             // uiButton1
             // 
             this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton1.Location = new System.Drawing.Point(511, 35);
             this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton1.Name = "uiButton1";
             this.uiButton1.Size = new System.Drawing.Size(100, 35);
-            this.uiButton1.Style = Sunny.UI.UIStyle.Custom;
             this.uiButton1.TabIndex = 0;
             this.uiButton1.Text = "更新书籍";
             this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
@@ -333,7 +327,7 @@ namespace 数据库实验
             this.ShowDragStretch = true;
             this.ShowRadius = false;
             this.ShowTitleIcon = true;
-            this.Text = "bookinfo";
+            this.Text = "书籍信息";
             this.Load += new System.EventHandler(this.bookinfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();

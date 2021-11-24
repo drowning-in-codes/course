@@ -258,6 +258,7 @@ namespace 数据库实验
             this.Name = "alterbook";
             this.ShowTitleIcon = true;
             this.Text = "alterbook";
+            this.Load += new System.EventHandler(this.alterbook_Load);
             this.uiTextBox2.ResumeLayout(false);
             this.uiTextBox2.PerformLayout();
             this.uiTableLayoutPanel1.ResumeLayout(false);

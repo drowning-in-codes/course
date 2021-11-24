@@ -48,6 +48,7 @@ namespace 数据库实验
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.uiButton4 = new Sunny.UI.UIButton();
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.uiComboBox2 = new Sunny.UI.UIComboBox();
@@ -181,6 +182,7 @@ namespace 数据库实验
             // 
             // uiGroupBox1
             // 
+            this.uiGroupBox1.Controls.Add(this.uiButton4);
             this.uiGroupBox1.Controls.Add(this.uiLabel6);
             this.uiGroupBox1.Controls.Add(this.uiLabel5);
             this.uiGroupBox1.Controls.Add(this.uiComboBox2);
@@ -205,6 +207,18 @@ namespace 数据库实验
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiGroupBox1.TitleAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // uiButton4
+            // 
+            this.uiButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton4.Location = new System.Drawing.Point(657, 162);
+            this.uiButton4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton4.Name = "uiButton4";
+            this.uiButton4.Size = new System.Drawing.Size(100, 35);
+            this.uiButton4.TabIndex = 12;
+            this.uiButton4.Text = "刷新";
+            this.uiButton4.Click += new System.EventHandler(this.uiButton4_Click);
+            // 
             // uiLabel6
             // 
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -222,7 +236,7 @@ namespace 数据库实验
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(100, 23);
             this.uiLabel5.TabIndex = 10;
-            this.uiLabel5.Text = "借阅时间";
+            this.uiLabel5.Text = "借阅时间(天)";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiComboBox2
@@ -499,7 +513,7 @@ namespace 数据库实验
             this.ShowDragStretch = true;
             this.ShowRadius = false;
             this.ShowTitleIcon = true;
-            this.Text = "Form2";
+            this.Text = "学生端";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -557,5 +571,6 @@ namespace 数据库实验
         private book_systemDataSet4TableAdapters.avai_bookTableAdapter avai_bookTableAdapter;
         private Sunny.UI.UILabel uiLabel6;
         private System.Windows.Forms.Timer timer2;
+        private Sunny.UI.UIButton uiButton4;
     }
 }

@@ -117,7 +117,7 @@ namespace 数据库实验
             }
             else
             {
-                alterbook ab = new alterbook(info);
+                alterbook ab = new alterbook(con,info,sno);
                 ab.Show();
                 if (ab.DialogResult == DialogResult.Yes)
                 {

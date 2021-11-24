@@ -474,7 +474,7 @@ namespace 数据库实验
             this.ShowIcon = true;
             this.ShowRadius = false;
             this.ShowTitleIcon = true;
-            this.Text = "studentinfo";
+            this.Text = "学生信息";
             this.Load += new System.EventHandler(this.studentinfo_Load);
             this.uiGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).EndInit();

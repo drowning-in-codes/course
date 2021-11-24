@@ -38,9 +38,6 @@ namespace 数据库实验
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiButton2 = new Sunny.UI.UIButton();
             this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
-            this.book_systemDataSet2 = new 数据库实验.book_systemDataSet2();
-            this.stusbBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stu_sbTableAdapter = new 数据库实验.book_systemDataSet2TableAdapters.stu_sbTableAdapter();
             this.snoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isbnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borrownumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +46,12 @@ namespace 数据库实验
             this.bnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isbackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isbackallowedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stusbBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.book_systemDataSet2 = new 数据库实验.book_systemDataSet2();
+            this.stu_sbTableAdapter = new 数据库实验.book_systemDataSet2TableAdapters.stu_sbTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stusbBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // uiButton1
@@ -137,20 +137,6 @@ namespace 数据库实验
             this.uiDataGridView1.Size = new System.Drawing.Size(796, 236);
             this.uiDataGridView1.TabIndex = 3;
             // 
-            // book_systemDataSet2
-            // 
-            this.book_systemDataSet2.DataSetName = "book_systemDataSet2";
-            this.book_systemDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stusbBindingSource
-            // 
-            this.stusbBindingSource.DataMember = "stu_sb";
-            this.stusbBindingSource.DataSource = this.book_systemDataSet2;
-            // 
-            // stu_sbTableAdapter
-            // 
-            this.stu_sbTableAdapter.ClearBeforeFill = true;
-            // 
             // snoDataGridViewTextBoxColumn
             // 
             this.snoDataGridViewTextBoxColumn.DataPropertyName = "sno";
@@ -215,6 +201,20 @@ namespace 数据库实验
             this.isbackallowedDataGridViewTextBoxColumn.Name = "isbackallowedDataGridViewTextBoxColumn";
             this.isbackallowedDataGridViewTextBoxColumn.Width = 125;
             // 
+            // stusbBindingSource
+            // 
+            this.stusbBindingSource.DataMember = "stu_sb";
+            this.stusbBindingSource.DataSource = this.book_systemDataSet2;
+            // 
+            // book_systemDataSet2
+            // 
+            this.book_systemDataSet2.DataSetName = "book_systemDataSet2";
+            this.book_systemDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stu_sbTableAdapter
+            // 
+            this.stu_sbTableAdapter.ClearBeforeFill = true;
+            // 
             // havebook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
@@ -227,11 +227,11 @@ namespace 数据库实验
             this.Padding = new System.Windows.Forms.Padding(2, 35, 2, 2);
             this.ShowDragStretch = true;
             this.ShowRadius = false;
-            this.Text = "havebook";
+            this.Text = "拥有书籍";
             this.Load += new System.EventHandler(this.havebook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stusbBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }

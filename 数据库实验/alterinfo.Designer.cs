@@ -162,7 +162,7 @@ namespace 数据库实验
             this.Controls.Add(this.uiButton1);
             this.Controls.Add(this.uiTableLayoutPanel1);
             this.Name = "alterinfo";
-            this.Text = "alterinfo";
+            this.Text = "审核记录";
             this.Load += new System.EventHandler(this.alterinfo_Load);
             this.uiTableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

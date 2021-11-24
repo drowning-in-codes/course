@@ -36,9 +36,6 @@ namespace 数据库实验
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
-            this.book_systemDataSet1 = new 数据库实验.book_systemDataSet1();
-            this.sbinfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sb_infoTableAdapter = new 数据库实验.book_systemDataSet1TableAdapters.sb_infoTableAdapter();
             this.snoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isbnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borrowtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,19 +46,22 @@ namespace 数据库实验
             this.isbackallowedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isallowedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isconallowedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avaisbBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.book_systemDataSet3 = new 数据库实验.book_systemDataSet3();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
-            this.uiLabel1 = new Sunny.UI.UILabel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.sbinfoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.sbinfoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.uiButton1 = new Sunny.UI.UIButton();
+            this.uiButton3 = new Sunny.UI.UIButton();
             this.uiButton2 = new Sunny.UI.UIButton();
+            this.uiButton1 = new Sunny.UI.UIButton();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.uiLabel1 = new Sunny.UI.UILabel();
+            this.avai_sbTableAdapter = new 数据库实验.book_systemDataSet3TableAdapters.avai_sbTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sbinfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avaisbBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet3)).BeginInit();
             this.uiGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sbinfoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbinfoBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +93,7 @@ namespace 数据库实验
             this.isbackallowedDataGridViewTextBoxColumn,
             this.isallowedDataGridViewTextBoxColumn,
             this.isconallowedDataGridViewTextBoxColumn});
-            this.uiDataGridView1.DataSource = this.sbinfoBindingSource;
+            this.uiDataGridView1.DataSource = this.avaisbBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -125,20 +125,6 @@ namespace 数据库实验
             this.uiDataGridView1.ShowGridLine = true;
             this.uiDataGridView1.Size = new System.Drawing.Size(796, 200);
             this.uiDataGridView1.TabIndex = 0;
-            // 
-            // book_systemDataSet1
-            // 
-            this.book_systemDataSet1.DataSetName = "book_systemDataSet1";
-            this.book_systemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sbinfoBindingSource
-            // 
-            this.sbinfoBindingSource.DataMember = "sb_info";
-            this.sbinfoBindingSource.DataSource = this.book_systemDataSet1;
-            // 
-            // sb_infoTableAdapter
-            // 
-            this.sb_infoTableAdapter.ClearBeforeFill = true;
             // 
             // snoDataGridViewTextBoxColumn
             // 
@@ -220,8 +206,20 @@ namespace 数据库实验
             this.isconallowedDataGridViewTextBoxColumn.Name = "isconallowedDataGridViewTextBoxColumn";
             this.isconallowedDataGridViewTextBoxColumn.Width = 125;
             // 
+            // avaisbBindingSource
+            // 
+            this.avaisbBindingSource.DataMember = "avai_sb";
+            this.avaisbBindingSource.DataSource = this.book_systemDataSet3;
+            // 
+            // book_systemDataSet3
+            // 
+            this.book_systemDataSet3.DataSetName = "book_systemDataSet3";
+            this.book_systemDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // uiGroupBox1
             // 
+            this.uiGroupBox1.Controls.Add(this.comboBox3);
+            this.uiGroupBox1.Controls.Add(this.uiButton3);
             this.uiGroupBox1.Controls.Add(this.uiButton2);
             this.uiGroupBox1.Controls.Add(this.uiButton1);
             this.uiGroupBox1.Controls.Add(this.comboBox2);
@@ -240,53 +238,47 @@ namespace 数据库实验
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiGroupBox1.TitleAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // uiLabel1
+            // comboBox3
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.Location = new System.Drawing.Point(103, 56);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(100, 34);
-            this.uiLabel1.TabIndex = 1;
-            this.uiLabel1.Text = "检查信息";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comboBox3.DataSource = this.avaisbBindingSource;
+            this.comboBox3.DisplayMember = "borrow_time";
+            this.comboBox3.FormatString = "G";
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(444, 57);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(146, 35);
+            this.comboBox3.TabIndex = 7;
+            this.comboBox3.ValueMember = "borrow_time";
             // 
-            // comboBox1
+            // uiButton3
             // 
-            this.comboBox1.DataSource = this.sbinfoBindingSource1;
-            this.comboBox1.DisplayMember = "sno";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(237, 56);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 35);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.ValueMember = "sno";
+            this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton3.Location = new System.Drawing.Point(465, 116);
+            this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton3.Name = "uiButton3";
+            this.uiButton3.Size = new System.Drawing.Size(100, 35);
+            this.uiButton3.TabIndex = 6;
+            this.uiButton3.Text = "刷新";
+            this.uiButton3.Click += new System.EventHandler(this.uiButton3_Click);
             // 
-            // sbinfoBindingSource1
+            // uiButton2
             // 
-            this.sbinfoBindingSource1.DataMember = "sb_info";
-            this.sbinfoBindingSource1.DataSource = this.book_systemDataSet1;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DataSource = this.sbinfoBindingSource2;
-            this.comboBox2.DisplayMember = "isbn";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(415, 56);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(132, 35);
-            this.comboBox2.TabIndex = 3;
-            this.comboBox2.ValueMember = "isbn";
-            // 
-            // sbinfoBindingSource2
-            // 
-            this.sbinfoBindingSource2.DataMember = "sb_info";
-            this.sbinfoBindingSource2.DataSource = this.book_systemDataSet1;
+            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton2.Location = new System.Drawing.Point(237, 116);
+            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton2.Name = "uiButton2";
+            this.uiButton2.Size = new System.Drawing.Size(100, 35);
+            this.uiButton2.TabIndex = 5;
+            this.uiButton2.Text = "确认";
+            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
             // 
             // uiButton1
             // 
             this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton1.Location = new System.Drawing.Point(599, 55);
+            this.uiButton1.Location = new System.Drawing.Point(643, 57);
             this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton1.Name = "uiButton1";
             this.uiButton1.Size = new System.Drawing.Size(100, 35);
@@ -294,19 +286,41 @@ namespace 数据库实验
             this.uiButton1.Text = "修改记录";
             this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
             // 
-            // uiButton2
+            // comboBox2
             // 
-            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton2.Location = new System.Drawing.Point(237, 116);
-            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton2.Name = "uiButton2";
-            this.uiButton2.Size = new System.Drawing.Size(100, 35);
-            this.uiButton2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton2.TabIndex = 5;
-            this.uiButton2.Text = "确认";
-            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
+            this.comboBox2.DataSource = this.avaisbBindingSource;
+            this.comboBox2.DisplayMember = "isbn";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(291, 56);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(132, 35);
+            this.comboBox2.TabIndex = 3;
+            this.comboBox2.ValueMember = "isbn";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.avaisbBindingSource;
+            this.comboBox1.DisplayMember = "sno";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(132, 57);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(136, 35);
+            this.comboBox1.TabIndex = 2;
+            this.comboBox1.ValueMember = "sno";
+            // 
+            // uiLabel1
+            // 
+            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.Location = new System.Drawing.Point(26, 56);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(100, 34);
+            this.uiLabel1.TabIndex = 1;
+            this.uiLabel1.Text = "检查信息";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // avai_sbTableAdapter
+            // 
+            this.avai_sbTableAdapter.ClearBeforeFill = true;
             // 
             // borrow
             // 
@@ -321,13 +335,12 @@ namespace 数据库实验
             this.ShowIcon = true;
             this.ShowRadius = false;
             this.ShowTitleIcon = true;
-            this.Text = "borrow";
+            this.Text = "借阅信息";
             this.Load += new System.EventHandler(this.borrow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sbinfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avaisbBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book_systemDataSet3)).EndInit();
             this.uiGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sbinfoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbinfoBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
@@ -336,9 +349,17 @@ namespace 数据库实验
         #endregion
 
         private Sunny.UI.UIDataGridView uiDataGridView1;
-        private book_systemDataSet1 book_systemDataSet1;
-        private System.Windows.Forms.BindingSource sbinfoBindingSource;
-        private book_systemDataSet1TableAdapters.sb_infoTableAdapter sb_infoTableAdapter;
+        private Sunny.UI.UIGroupBox uiGroupBox1;
+        private Sunny.UI.UILabel uiLabel1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private Sunny.UI.UIButton uiButton1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private Sunny.UI.UIButton uiButton2;
+        private Sunny.UI.UIButton uiButton3;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private book_systemDataSet3 book_systemDataSet3;
+        private System.Windows.Forms.BindingSource avaisbBindingSource;
+        private book_systemDataSet3TableAdapters.avai_sbTableAdapter avai_sbTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn snoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn isbnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn borrowtimeDataGridViewTextBoxColumn;
@@ -349,13 +370,6 @@ namespace 数据库实验
         private System.Windows.Forms.DataGridViewTextBoxColumn isbackallowedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn isallowedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn isconallowedDataGridViewTextBoxColumn;
-        private Sunny.UI.UIGroupBox uiGroupBox1;
-        private Sunny.UI.UILabel uiLabel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.BindingSource sbinfoBindingSource1;
-        private Sunny.UI.UIButton uiButton1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.BindingSource sbinfoBindingSource2;
-        private Sunny.UI.UIButton uiButton2;
     }
 }

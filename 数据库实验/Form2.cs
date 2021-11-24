@@ -51,6 +51,7 @@ namespace 数据库实验
             {
                 this.Dispose();//可以阻止Application.Exit()这句代码执行后再次Form2_FormClosing（）方法，需要点两次关闭
                 Application.Exit();
+                System.Environment.Exit(0);
             }
             else
             {
@@ -79,8 +80,7 @@ namespace 数据库实验
             }
             if (suc == 1)
                 UIMessageTip.ShowOk("借书请求成功,等待管理员审核");
-            // TODO: 这行代码将数据加载到表“book_systemDataSet_book.books”中。您可以根据需要移动或删除它。
-            this.booksTableAdapter1.Fill(this.book_systemDataSet_book.books);
+            
             // TODO: 这行代码将数据加载到表“book_systemDataSet2.books”中。您可以根据需要移动或删除它。
             this.avai_bookTableAdapter.Fill(this.book_systemDataSet4.avai_book);
         }
@@ -90,7 +90,7 @@ namespace 数据库实验
             int suc = 1;
             string book_sno = this.comboBox1.Text;
             string sql = "update sb_info set is_back=1 where isbn=\"{0}\" and sno=\"{1}\";";
-            MySqlCommand cmd = new MySqlCommand(string.Format(sql, this.username, book_sno), con);
+            MySqlCommand cmd = new MySqlCommand(string.Format(sql, book_sno, this.username), con);
             try
             {
                 cmd.ExecuteNonQuery();
@@ -102,8 +102,7 @@ namespace 数据库实验
             }
             if (suc == 1)
                 UIMessageTip.ShowOk("还书请求成功,等待管理员审核");
-            // TODO: 这行代码将数据加载到表“book_systemDataSet_book.books”中。您可以根据需要移动或删除它。
-            this.booksTableAdapter1.Fill(this.book_systemDataSet_book.books);
+            
             // TODO: 这行代码将数据加载到表“book_systemDataSet2.books”中。您可以根据需要移动或删除它。
             this.avai_bookTableAdapter.Fill(this.book_systemDataSet4.avai_book);
 
@@ -113,11 +112,11 @@ namespace 数据库实验
         {
             int suc = 1;
             string book_sno = this.comboBox1.Text;
-            string sql = "update sb_info set is_con=1) where isbn=\"{0}\" and sno=\"{1}\";";
+            string sql = "update sb_info set is_con=1 where isbn=\"{0}\" and sno=\"{1}\";";
            
             try
             {
-                MySqlCommand cmd = new MySqlCommand(string.Format(sql,this.username, book_sno), con);
+                MySqlCommand cmd = new MySqlCommand(string.Format(sql, book_sno,this.username), con);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -127,8 +126,7 @@ namespace 数据库实验
             }
             if (suc == 1)
                 UIMessageTip.ShowOk("续借书请求成功,等待管理员审核");
-            // TODO: 这行代码将数据加载到表“book_systemDataSet_book.books”中。您可以根据需要移动或删除它。
-            this.booksTableAdapter1.Fill(this.book_systemDataSet_book.books);
+       
             // TODO: 这行代码将数据加载到表“book_systemDataSet2.books”中。您可以根据需要移动或删除它。
             this.avai_bookTableAdapter.Fill(this.book_systemDataSet4.avai_book);
 
@@ -183,6 +181,9 @@ namespace 数据库实验
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            
+            // TODO: 这行代码将数据加载到表“book_systemDataSet2.books”中。您可以根据需要移动或删除它。
+            this.avai_bookTableAdapter.Fill(this.book_systemDataSet4.avai_book);
             string sql = "select back_time from student,books,sb_info where student.sno=sb_info.sno and books.isbn=sb_info.isbn and is_back=0 and borrow_num>0;";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             MySqlDataReader dr = null;
@@ -209,6 +210,15 @@ namespace 数据库实验
                 }
             }
             dr.Close();
+        }
+
+        private void uiButton4_Click(object sender, EventArgs e)
+        {
+            // TODO: 这行代码将数据加载到表“book_systemDataSet_book.books”中。您可以根据需要移动或删除它。
+            this.booksTableAdapter1.Fill(this.book_systemDataSet_book.books);
+            // TODO: 这行代码将数据加载到表“book_systemDataSet2.books”中。您可以根据需要移动或删除它。
+            this.avai_bookTableAdapter.Fill(this.book_systemDataSet4.avai_book);
+            UIMessageTip.ShowOk("刷新成功");
         }
     }
 }

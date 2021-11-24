@@ -144,7 +144,7 @@ namespace 数据库实验
             // 管理员权限ToolStripMenuItem
             // 
             this.管理员权限ToolStripMenuItem.Name = "管理员权限ToolStripMenuItem";
-            this.管理员权限ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.管理员权限ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.管理员权限ToolStripMenuItem.Text = "管理员权限";
             this.管理员权限ToolStripMenuItem.Click += new System.EventHandler(this.管理员权限ToolStripMenuItem_Click);
             // 
@@ -177,8 +177,8 @@ namespace 数据库实验
             this.ShowRadius = false;
             this.ShowTitleIcon = true;
             this.Style = Sunny.UI.UIStyle.Custom;
-            this.Text = "数据库实验";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Text = "管理员端";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

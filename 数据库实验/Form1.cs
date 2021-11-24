@@ -36,43 +36,17 @@ namespace 数据库实验
                 this.level.Text = "等级:学生";
             
         }
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (UIMessageDialog.ShowAskDialog(this, "确定退出吗?", UIStyle.Colorful))
-
-            {
-                this.Dispose();//可以阻止Application.Exit()这句代码执行后再次Form2_FormClosing（）方法，需要点两次关闭
-                Application.Exit();
-            }
-            else
-            {
-                e.Cancel = true;   //不关闭窗口   //关闭窗口 e.Cancel = false;
-            }
-
-        }
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.Label3.Text = DateTime.Now.DateTimeString();
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
-            UIMessageDialog.ShowMessageDialog(this,"请给个好评","退出",true,UIStyle.Colorful);
-            this.con.Close();
-
-        }
+       
 
         private void uiButton1_Click(object sender, EventArgs e)
         {
-            /*  String sqlId = "select * from student";
-              con.Open(); 
-              MySqlCommand cmd = new MySqlCommand(sqlId, con);
-              MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-              DataSet ds = new DataSet();
-              da.Fill(ds, "student");            //dataGridView1.DataSource=ds.Tables["Student"];此处直接用DataTalbe绑定，与下面两行代码的效果是一样的
-              uiDataGridView1.DataSource = ds;//使用Dataset，单必须指定DataMember，因为DataSet是DataTable的集合，而datagridview只能绑定一个datatable
-              */
+            
             string sql = "select * from student";
             MySqlCommand cmd = new MySqlCommand(sql,con);
             string v  = (string)cmd.ExecuteScalar();
@@ -87,8 +61,8 @@ namespace 数据库实验
 
         private void 书籍信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bookinfo si = new bookinfo(con);
-            si.Show();
+            bookinfo bi = new bookinfo(con);
+            bi.Show();
         }
 
         private void 借阅记录ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,6 +81,23 @@ namespace 数据库实验
         {
             string info = "管理员权限:1.增加书籍\n2.删除书籍\n3.增加,修改,删除学生信息\n4.审核借阅记录";
             UIMessageDialog.ShowInfoDialog(this, info);
+        }
+
+       
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (UIMessageDialog.ShowAskDialog(this, "确定退出吗?", UIStyle.Colorful))
+
+            {
+                this.Dispose();//可以阻止Application.Exit()这句代码执行后再次Form2_FormClosing（）方法，需要点两次关闭
+                Application.Exit();
+                System.Environment.Exit(0);
+            }
+            else
+            {
+                e.Cancel = true;   //不关闭窗口   //关闭窗口 e.Cancel = false;
+            }
         }
     }
 }
