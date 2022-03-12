@@ -1,0 +1,38 @@
+<!--
+ * @Author: proaniemr
+ * @Date: 2022-03-12 22:47:26
+ * @LastEditors: proaniemr
+ * @LastEditTime: 2022-03-12 22:51:05
+ * @Description: 请填写简介
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习vue</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> 生产环境-->
+</body>
+<script>
+var vm = new Vue({
+    el:"#app",
+    data() {
+        return {
+            message:"你好",  //声明式渲染
+            
+        }
+    },
+
+})
+
+
+</script>
+</html>
