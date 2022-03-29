@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "数据库实验", "数据库实验.csproj", "{6A94F3E7-233E-4682-8170-5884EA6821B9}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "书籍管理系统", "..\书籍管理系统\书籍管理系统.vdproj", "{5A631F36-3A3E-4811-AAEE-844752E44C87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A94F3E7-233E-4682-8170-5884EA6821B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A94F3E7-233E-4682-8170-5884EA6821B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A94F3E7-233E-4682-8170-5884EA6821B9}.Debug|Default.ActiveCfg = Debug|Any CPU
+		{6A94F3E7-233E-4682-8170-5884EA6821B9}.Debug|Default.Build.0 = Debug|Any CPU
+		{6A94F3E7-233E-4682-8170-5884EA6821B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A94F3E7-233E-4682-8170-5884EA6821B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A94F3E7-233E-4682-8170-5884EA6821B9}.Release|Default.ActiveCfg = Release|Any CPU
+		{6A94F3E7-233E-4682-8170-5884EA6821B9}.Release|Default.Build.0 = Release|Any CPU
+		{5A631F36-3A3E-4811-AAEE-844752E44C87}.Debug|Any CPU.ActiveCfg = Debug
+		{5A631F36-3A3E-4811-AAEE-844752E44C87}.Debug|Default.ActiveCfg = Debug
+		{5A631F36-3A3E-4811-AAEE-844752E44C87}.Debug|Default.Build.0 = Debug
+		{5A631F36-3A3E-4811-AAEE-844752E44C87}.Release|Any CPU.ActiveCfg = Release
+		{5A631F36-3A3E-4811-AAEE-844752E44C87}.Release|Any CPU.Build.0 = Release
+		{5A631F36-3A3E-4811-AAEE-844752E44C87}.Release|Default.ActiveCfg = Release
+		{5A631F36-3A3E-4811-AAEE-844752E44C87}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3229ECE1-46DC-4585-A417-665CD3661C6B}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+	EndGlobalSection
+EndGlobal
